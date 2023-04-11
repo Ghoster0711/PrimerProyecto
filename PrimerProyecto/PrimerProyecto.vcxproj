@@ -133,7 +133,6 @@
     <ClCompile Include="Deportista.h" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="Nadador.cpp" />
-    <ClCompile Include="Sianny.cpp" />
     <ClCompile Include="Triatlonista.h" />
     <ClCompile Include="Triatonista.cpp" />
   </ItemGroup>
