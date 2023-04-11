@@ -14,9 +14,9 @@ void Nadador::setProcGrasaCorporal(double porc) { porcGrasaCorporal = porc; }
 
 string Nadador::toString() {
 	stringstream show;
-	show << "Mesa Muscular: " << masaMuscular << endl
-		<< "Peso: " << peso << endl
-		<< "Porcentaje de grasa corporal: " << porcGrasaCorporal << endl;
+	show << "| Mesa Muscular: " << masaMuscular << endl
+		<< "| Peso: " << peso << endl
+		<< "| Porcentaje de grasa corporal: " << porcGrasaCorporal << endl;
 
 	return show.str();
 }

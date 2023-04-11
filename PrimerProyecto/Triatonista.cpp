@@ -30,14 +30,14 @@ void Triatlonista::setCiclista(Ciclista* cic){ }
 string Triatlonista::toString(){ 
 	stringstream show;
 
-	show << "Cedula: " << cedula << endl
-		<< "Nombre: " << nombre << endl
-		<< "Telefono: " << telefono << endl
-		<< "Fecha de Nacimiento: " << fecha << endl
-		<< "Sexo: " << sexo << endl
-		<< "Estatura: " << estatura << endl
-		<< "Cantidad de participantes en Iron Man: " << cantParticEnIronMan << endl
-		<< "Cantidad de triatlonistas ganados: " << cantTriatGanados << endl;
+	show << "| Cedula: " << cedula << endl
+		<< "| Nombre: " << nombre << endl
+		<< "| Telefono: " << telefono << endl
+		<< "| Fecha de Nacimiento: " << fecha << endl
+		<< "| Sexo: " << sexo << endl
+		<< "| Estatura: " << estatura << endl
+		<< "| Cantidad de participantes en Iron Man: " << cantParticEnIronMan << endl
+		<< "| Cantidad de triatlonistas ganados: " << cantTriatGanados << endl;
 	if (nadador != NULL)
 		show << nadador->toString();
 	if (ciclista != NULL)

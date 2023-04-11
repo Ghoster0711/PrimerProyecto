@@ -12,7 +12,7 @@ void Ciclista::setTemPromedio(double tem) { temPromedio = tem; }
 
 string Ciclista::toString(){
 	stringstream show;
-	show << "Horas Entrenadas: " << horasEntrenadas << endl
-		<< "Tem.. Promedio: " << temPromedio << endl;
+	show << "| Horas Entrenadas: " << horasEntrenadas << endl
+		<< "| Tem.. Promedio: " << temPromedio << endl;
 	return show.str();
 }
