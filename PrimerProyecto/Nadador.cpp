@@ -20,4 +20,4 @@ string Nadador::toString() {
 
 	return show.str();
 }
-//HOLAAAAAAAA
+//Hola buenas noches 
