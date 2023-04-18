@@ -15,6 +15,6 @@ class Curso{
         Curso();
         Curso(string, string, string, int);
         virtual ~Curso();
-        
+        //Hacer los demas metodos
 
 }
