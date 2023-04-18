@@ -21,4 +21,5 @@ class Horario{
         void setHora(int);
         void setMinuto(int);
         string toString();    
+
 }
