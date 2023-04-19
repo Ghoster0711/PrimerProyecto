@@ -3,7 +3,7 @@
 Horario::Horario()
 	:dia(""), hora(0), minuto(0) {}
 Horario::Horario(string dia, int hora, int minuto)
-	: dia(dia), hora(hora), minuto(minuto) {}
+	:dia(dia), hora(hora), minuto(minuto) {}
 Horario::~Horario() {	}
 string Horario::getDia() { return dia; }
 int Horario::getHora() { return hora; }

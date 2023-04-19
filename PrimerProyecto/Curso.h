@@ -2,7 +2,6 @@
 #include "Horario.h"
 #include "Deportista.h"
 
-
 class Curso {
 private:
     string nombre;
