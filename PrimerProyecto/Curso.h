@@ -15,6 +15,11 @@ class Curso{
         Curso();
         Curso(string, string, string, int);
         virtual ~Curso();
+        string getNombre();
+        string getDescription();
+        string get Nivel();
+        int getCupoMaximo();
+        
         //Hacer los demas metodos
 
 }
