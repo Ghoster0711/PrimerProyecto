@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
     <ClCompile Include="Corredor.cpp" />
+    <ClCompile Include="Curso.cpp" />
     <ClCompile Include="Deportista.cpp" />
     <ClCompile Include="Deportista.h" />
     <ClCompile Include="Fecha.cpp" />
