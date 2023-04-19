@@ -132,6 +132,7 @@
     <ClCompile Include="Deportista.cpp" />
     <ClCompile Include="Deportista.h" />
     <ClCompile Include="Fecha.cpp" />
+    <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Nadador.cpp" />
     <ClCompile Include="Triatlonista.h" />
     <ClCompile Include="Triatonista.cpp" />
@@ -139,7 +140,9 @@
   <ItemGroup>
     <ClInclude Include="Ciclista.h" />
     <ClInclude Include="Corredor.h" />
+    <ClInclude Include="Curso.h" />
     <ClInclude Include="Fecha.h" />
+    <ClInclude Include="Horario.h" />
     <ClInclude Include="Nadador.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

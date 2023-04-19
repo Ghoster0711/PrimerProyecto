@@ -39,6 +39,9 @@
     <ClCompile Include="Triatonista.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Horario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fecha.h">
@@ -51,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Nadador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Curso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Horario.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
