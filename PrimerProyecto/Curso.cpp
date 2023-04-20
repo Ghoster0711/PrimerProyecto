@@ -44,14 +44,34 @@ void Curso::ingresarReserva(Deportista* depo) {
 	if (cantD < tamD)
 		reserva[cantD++] = depo;
 }
+string Curso::imprimeDeportistas() {
+	stringstream show;
+	show << "-------------Lista de Integrantes-------------" << endl;
+	for (int i = 0; i < cantD; i++) {
+		show << "Nombre: " << reserva[i]->getNombre() << endl
+			<< "Cedula: " << reserva[i]->getCedula() << endl
+			<< "Telefono: " << reserva[i]->getTelefono() << endl
+			<< endl;
+	}
+	return show.str();
+}
+string Curso::imprimeHorarios() {
+	stringstream show;
+	show << "------------------Horarios------------------" << endl;
+	for (int i = 0; i < 7; i++) {
+		show << horario[i]->toString();
+	}
+	return show.str();
+}
 string Curso::toString() {
 	stringstream show;
 	show << "------------------------------------------------" << endl
 		<< "| Nombre del curso:" << nombre << endl
 		<< "| Descripcion del curso: " << descripcion << endl
 		<< "| Nivel del curos: " << nivel << endl
-		<< "| Cupo Maximo del curso: " << cupoMaximo << endl;
-	// falta hacer los metodos para recorrer los vectores y imprimir la informacion
+		<< "| Cupo Maximo del curso: " << cupoMaximo << endl
+		<< imprimeDeportistas() << endl
+		<< imprimeHorarios() << endl;
 
 	return show.str();
 }
