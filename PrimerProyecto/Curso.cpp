@@ -46,7 +46,6 @@ void Curso::ingresarReserva(Deportista* depo) {
 }
 string Curso::toString() {
 	stringstream show;
-
 	show << "------------------------------------------------" << endl
 		<< "| Nombre del curso:" << nombre << endl
 		<< "| Descripcion del curso: " << descripcion << endl
