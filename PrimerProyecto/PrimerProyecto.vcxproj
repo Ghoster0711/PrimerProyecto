@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
+    <ClCompile Include="ClaseServicioFechas.cpp" />
     <ClCompile Include="Corredor.cpp" />
     <ClCompile Include="Curso.cpp" />
     <ClCompile Include="Deportista.cpp" />
