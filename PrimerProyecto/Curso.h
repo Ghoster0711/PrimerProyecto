@@ -9,9 +9,11 @@ private:
     string nivel;
     int cupoMaximo;
     Deportista** reserva;
-    Horario** horario[7];
-    int cant;
-    int tam;
+    Horario** horario;
+    int cantD;
+    int tamD;
+    int cantH;
+
 public:
     Curso();
     Curso(string, string, string, int);
@@ -24,6 +26,8 @@ public:
     void setDescripcion(string);
     void setNivel(string);
     void setCupoMaximo(int);
+    void ingresarHorario(Horario*);
+    void ingresarReserva(Deportista*);
     //Faltan metodos para recorrer los vectores
     string toString();
 
