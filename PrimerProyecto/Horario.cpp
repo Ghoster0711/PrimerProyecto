@@ -13,8 +13,8 @@ void Horario::setHora(int h) { hora = h; }
 void Horario::setMinuto(int m) { minuto = m; }
 string Horario::toString(){
 	stringstream show;
-
-	show << "Dia: " << dia << "\t Hora del curso: " << hora << ":" << minuto << endl;
+	show << "Dia: " << dia << "\t Hora del curso: " << hora << ":" << minuto << endl
+		<< endl;
 
 	return show.str();
 }

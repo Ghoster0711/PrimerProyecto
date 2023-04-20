@@ -29,6 +29,8 @@ public:
     void ingresarHorario(Horario*);
     void ingresarReserva(Deportista*);
     //Faltan metodos para recorrer los vectores
+    string imprimeDeportistas();
+    string imprimeHorarios();
     string toString();
 
     //Hacer los demas metodos
