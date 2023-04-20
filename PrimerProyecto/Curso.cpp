@@ -58,7 +58,7 @@ string Curso::imprimeDeportistas() {
 string Curso::imprimeHorarios() {
 	stringstream show;
 	show << "------------------Horarios------------------" << endl;
-	for (int i = 0; i < 7; i++) {
+	for (int i = 0; i < cantH; i++) {
 		show << horario[i]->toString();
 	}
 	return show.str();
