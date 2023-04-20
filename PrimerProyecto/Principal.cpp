@@ -8,7 +8,7 @@ int main() {
 	Fecha* f2 = new Fecha(18, 2, 2024);
 
 	ServicioFechas sf;
-	sf.diferenciaFechas(f1, f2);
+	cout << sf.diferenciaFechas(f1, f2);
 
 
 
