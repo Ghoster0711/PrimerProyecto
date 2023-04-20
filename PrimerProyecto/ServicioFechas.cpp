@@ -22,14 +22,9 @@ string ServicioFechas::diferenciaFechas(Fecha* fecha1, Fecha* fecha2) {
 			respMes = fecha1->getMes() - fecha2->getMes();
 	}
 	s << "La diferencia entre " << fecha1->toString() << " y " << fecha2->toString() 
-		<< " es de: ";
-	if (fecha1->getAnio() - fecha2->getAnio() <= 0) {
-		s << respMes << " meses " << " y " << respFech << " dias" << endl;
-	}
-	else {
-		s << fecha1->getAnio() - fecha2->getAnio()
-			<< " años, con " << respMes << " meses " << " y " << respFech << " dias" << endl;
-	}
+	  << " es de: ";
+	s << fecha1->getAnio() - fecha2->getAnio()
+	  << " años, con " << respMes << " meses " << " y " << respFech << " dias" << endl;
 	return s.str();
 
 }
