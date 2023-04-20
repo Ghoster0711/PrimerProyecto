@@ -15,7 +15,17 @@ int Triatlonista::getCantParticEnIronMan() { return cantParticEnIronMan; }
 int Triatlonista::getCantTriatGanados() { return cantTriatGanados; }
 Nadador* Triatlonista::getNadador() { return nadador; }
 Ciclista* Triatlonista::getCiclista() { return ciclista; }
+double Triatlonista::getMasaMuscular() { return nadador->getMasaMuscular(); }
+double Triatlonista::getPeso() { return nadador->getPeso(); }
+double Triatlonista::getProcGrasaCorporal() { return nadador->getProcGrasaCorporal(); }
+int Triatlonista::getHorasEntrenadas() { return ciclista->getHorasEntrenadas(); }
+double Triatlonista::getTemPromedio() { return ciclista->getTemPromedio(); }
 
+void Triatlonista::setHorasEntrenadas(int horas) { ciclista->setHorasEntrenadas(horas); }
+void Triatlonista::setTemPromedio(double tem) { ciclista->setTemPromedio(tem); }
+void Triatlonista::setMasaMuscular(double mas) { nadador->setMasaMuscular(mas); }
+void Triatlonista::setPeso(double pes) { nadador->setPeso(pes); }
+void Triatlonista::setProcGrasaCorporal(double proc) { nadador->setProcGrasaCorporal(proc); }
 void Triatlonista::setCedula(string ced) { cedula = ced; }
 void Triatlonista::setNombre(string nom) { nombre = nom; }
 void Triatlonista::setTelefono(string tel) { telefono = tel; }

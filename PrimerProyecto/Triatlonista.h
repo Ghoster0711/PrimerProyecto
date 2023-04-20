@@ -23,7 +23,17 @@ public:
 	int getCantTriatGanados();
 	Nadador* getNadador();
 	Ciclista* getCiclista();
+	double getMasaMuscular();
+	double getPeso();
+	double getProcGrasaCorporal();
+	int getHorasEntrenadas();
+	double getTemPromedio();
 
+	void setHorasEntrenadas(int);
+	void setTemPromedio(double);
+	void setMasaMuscular(double);
+	void setPeso(double);
+	void setProcGrasaCorporal(double);
 	void setCedula(string);
 	void setNombre(string);
 	void setTelefono(string);

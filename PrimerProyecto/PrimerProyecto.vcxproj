@@ -143,6 +143,7 @@
     <ClInclude Include="Corredor.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Fecha.h" />
+    <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Nadador.h" />
   </ItemGroup>

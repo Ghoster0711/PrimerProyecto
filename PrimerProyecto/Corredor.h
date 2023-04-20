@@ -20,7 +20,17 @@ public:
 	virtual int getCantTriatGanados() = 0;
 	virtual Nadador* getNadador() = 0;
 	virtual Ciclista* getCiclista() = 0;
+	virtual double getMasaMuscular() = 0;
+	virtual double getPeso() = 0;
+	virtual double getProcGrasaCorporal() = 0;
+	virtual int getHorasEntrenadas() = 0;
+	virtual double getTemPromedio() = 0;
 
+	virtual void setHorasEntrenadas(int) = 0;
+	virtual void setTemPromedio(double) = 0;
+	virtual void setMasaMuscular(double) = 0;
+	virtual void setPeso(double) = 0;
+	virtual void setProcGrasaCorporal(double) = 0;
 	virtual void setCedula(string) = 0;
 	virtual void setNombre(string) = 0;
 	virtual void setTelefono(string) = 0;
