@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
+    <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="ServicioFechas.cpp" />
     <ClCompile Include="Corredor.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Nadador.h" />
+    <ClInclude Include="Nodo.h" />
     <ClInclude Include="ServicioFechas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
