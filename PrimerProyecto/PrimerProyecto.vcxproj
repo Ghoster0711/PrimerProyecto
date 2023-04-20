@@ -134,6 +134,7 @@
     <ClCompile Include="Deportista.cpp" />
     <ClCompile Include="Deportista.h" />
     <ClCompile Include="Fecha.cpp" />
+    <ClCompile Include="HistorialDePago.cpp" />
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Nadador.cpp" />
     <ClCompile Include="Triatlonista.h" />
