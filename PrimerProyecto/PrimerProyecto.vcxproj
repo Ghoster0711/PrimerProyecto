@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
-    <ClCompile Include="ClaseServicioFechas.cpp" />
+    <ClCompile Include="ServicioFechas.cpp" />
     <ClCompile Include="Corredor.cpp" />
     <ClCompile Include="Curso.cpp" />
     <ClCompile Include="Deportista.cpp" />
@@ -147,6 +147,7 @@
     <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Nadador.h" />
+    <ClInclude Include="ServicioFecha.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
