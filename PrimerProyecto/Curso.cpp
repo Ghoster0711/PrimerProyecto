@@ -1,7 +1,7 @@
 #include "Curso.h"
 
 Curso::Curso()
-	:nombre(""), descripcion(""), nivel(""), cupoMaximo(0) {
+	:nombre(""), descripcion(""), nivel(""), cupoMaximo(0), cantD(0), cantH(0), tamD(0) {
 	reserva = new Deportista * [tamD];
 	horario = new Horario * [7];
 	for (int i = 0; i < tamD; i++)
