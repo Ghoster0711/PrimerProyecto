@@ -7,7 +7,7 @@ int main() {
 	bool salir = false;
 	int opcion;
 	while (salir) {
-		menu();
+		cout << menu();
 		cin >> opcion;
 		switch (opcion) {
 			case 1:

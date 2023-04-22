@@ -150,7 +150,6 @@
     <ClInclude Include="Corredor.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Fecha.h" />
-    <ClInclude Include="Funciones.h" />
     <ClInclude Include="Gym.h" />
     <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
