@@ -8,4 +8,8 @@ private:
 	Nodo<T*>* _ultimo;
 	int cantidad;
 public:
+	Contenedor();
+	virtual ~Contenedor();
+
+	void ingresar(T*);
 };

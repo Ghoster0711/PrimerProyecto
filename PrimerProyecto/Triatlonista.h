@@ -9,7 +9,7 @@ private:
 	Nadador* nadador;
 	Ciclista* ciclista;
 public:
-	Triatlonista(string, string, string, Fecha*, char, double, int, int);
+	Triatlonista(string, string, string, Fecha*, char, double, int, int, int, double, double, double, double);
 	virtual ~Triatlonista();
 
 
@@ -28,7 +28,9 @@ public:
 	double getProcGrasaCorporal();
 	int getHorasEntrenadas();
 	double getTemPromedio();
+	HistorialDePago* getHistoria();
 
+	void setHistorialDePago(HistorialDePago*);
 	void setHorasEntrenadas(int);
 	void setTemPromedio(double);
 	void setMasaMuscular(double);

@@ -1,8 +1,16 @@
 #include "Triatlonista.h"
 
-Triatlonista::Triatlonista(string ced, string nom, string tel, Fecha* fec, char sex, double est, int cantP, int cantT)
-:Corredor(ced, nom, tel, fec, sex, est), cantParticEnIronMan(cantP), cantTriatGanados(cantT), nadador(NULL), ciclista(NULL) { }
-Triatlonista::~Triatlonista(){ }
+Triatlonista::Triatlonista(string ced, string nom, string tel, Fecha* fec, char sex, double est, int cantP, int cantT, int horasEntrenas, double temPro, double masa, double peso, double porcG)
+:Corredor(ced, nom, tel, fec, sex, est), cantParticEnIronMan(cantP), cantTriatGanados(cantT) {
+	ciclista = new Ciclista(horasEntrenas, temPro);
+	nadador = new Nadador(masa, peso, porcG);
+}
+Triatlonista::~Triatlonista(){
+	if (ciclista != NULL)
+		delete ciclista;
+	if (nadador != NULL)
+		delete nadador;
+}
 
 
 string Triatlonista::getCedula() { return cedula; }
@@ -20,7 +28,9 @@ double Triatlonista::getPeso() { return nadador->getPeso(); }
 double Triatlonista::getProcGrasaCorporal() { return nadador->getProcGrasaCorporal(); }
 int Triatlonista::getHorasEntrenadas() { return ciclista->getHorasEntrenadas(); }
 double Triatlonista::getTemPromedio() { return ciclista->getTemPromedio(); }
+HistorialDePago* Triatlonista::getHistoria() { return historial; }
 
+void Triatlonista::setHistorialDePago(HistorialDePago* his) { historial = his; }
 void Triatlonista::setHorasEntrenadas(int horas) { ciclista->setHorasEntrenadas(horas); }
 void Triatlonista::setTemPromedio(double tem) { ciclista->setTemPromedio(tem); }
 void Triatlonista::setMasaMuscular(double mas) { nadador->setMasaMuscular(mas); }

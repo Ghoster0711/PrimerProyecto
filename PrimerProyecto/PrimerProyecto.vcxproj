@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
     <ClCompile Include="Contenedor.cpp" />
+    <ClCompile Include="Gym.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="ServicioFechas.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Corredor.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Fecha.h" />
+    <ClInclude Include="Gym.h" />
     <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Nadador.h" />
