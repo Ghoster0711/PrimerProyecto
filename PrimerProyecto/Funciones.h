@@ -4,6 +4,6 @@ using namespace std;
 
 void menu() {
 	cout << "\t\tMENU PRINCIPAL" << endl;
-	cout <<
+	
 
 }

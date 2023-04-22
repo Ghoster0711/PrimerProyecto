@@ -8,11 +8,12 @@ int main() {
 	int opcion;
 	while (salir) {
 		menu();
+		cin >> opcion;
 		switch (opcion) {
 			case 1:
 				break;
 			case 2:
-				break;
+				break;  
 			case 3:
 				break;
 			case 4:

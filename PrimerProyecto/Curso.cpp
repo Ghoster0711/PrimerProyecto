@@ -35,7 +35,7 @@ int Curso::getCupoMaximo() { return cupoMaximo; }
 void Curso::setNombre(string nom) { nombre = nom; }
 void Curso::setDescripcion(string desc) { descripcion = desc; }
 void Curso::setNivel(string niv) { nivel = niv; }
-void Curso::setCupoMaximo(int cupo) { cupoMaximo + cupo; }
+void Curso::setCupoMaximo(int cupo) { cupoMaximo = cupo; }
 void Curso::ingresarHorario(Horario* horar){
 	if (cantH < 7)
 		horario[cantH++] = horar;
