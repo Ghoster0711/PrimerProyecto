@@ -1,13 +1,12 @@
 #include "Gym.h"
-#include "Funciones.h"
-
+#include "Interfaz.h"
 using namespace std;
 
 int main() {
 	bool salir = false;
 	int opcion;
 	while (salir) {
-		cout << menu();
+		Interfaz::menu();
 		cin >> opcion;
 		switch (opcion) {
 			case 1:
