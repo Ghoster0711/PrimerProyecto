@@ -3,7 +3,7 @@
 #include "Deportista.h"
 #include "Curso.h"
 
-	template<class T>
+template<class T>
 class Nodo {
 private:
 	T* dato;

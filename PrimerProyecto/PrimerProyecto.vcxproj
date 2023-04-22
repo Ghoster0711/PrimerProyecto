@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
+    <ClCompile Include="Contenedor.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="ServicioFechas.cpp" />
@@ -144,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ciclista.h" />
+    <ClInclude Include="Contenedor.h" />
     <ClInclude Include="Corredor.h" />
     <ClInclude Include="Curso.h" />
     <ClInclude Include="Fecha.h" />
