@@ -1,15 +1,28 @@
-#include"ServicioFechas.h"
-#include"Fecha.h"
+#include "Gym.h"
+#include "Funciones.h"
 
 using namespace std;
 
 int main() {
-	Fecha* f1 = new Fecha(4, 8, 2017);
-	Fecha* f2 = new Fecha(18, 2, 2024);
-
-	ServicioFechas sf;
-	cout << sf.diferenciaFechas(f1, f2);
-
+	bool salir = false;
+	int opcion;
+	while (salir) {
+		menu();
+		switch (opcion) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+		}
+	}
 
 
 
