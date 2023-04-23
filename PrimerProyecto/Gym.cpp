@@ -4,8 +4,6 @@
 Gym::Gym(){
 	nombre = "";
 	mensualidad = 0;
-	COD = new Contenedor<Deportista>();
-	COC = new Contenedor<Curso>();
 }
 
 

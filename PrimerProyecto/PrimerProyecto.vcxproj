@@ -130,6 +130,7 @@
     <ClCompile Include="Ciclista.cpp" />
     <ClCompile Include="Contenedor.cpp" />
     <ClCompile Include="Gym.cpp" />
+    <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="ServicioFechas.cpp" />

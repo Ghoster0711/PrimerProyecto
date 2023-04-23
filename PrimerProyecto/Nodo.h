@@ -9,6 +9,7 @@ private:
 	T* dato;
 	Nodo<T>* siguiente;
 public:
+	Nodo();
 	Nodo(T*);
 	virtual ~Nodo();
 

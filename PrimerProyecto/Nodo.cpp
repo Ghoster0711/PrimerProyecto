@@ -1,9 +1,15 @@
 #include "Nodo.h"
 
 template<class T>
+Nodo<T>::Nodo() {
+	this->dato = NULL;
+	this->siguiente = NULL;
+}
+
+template<class T>
 Nodo<T>::Nodo(T* dato) {
 	this->dato = dato;
-	this->siguiente = nullptr;
+	this->siguiente = NULL;
 }
 
 template<class T>
