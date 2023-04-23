@@ -9,6 +9,13 @@ using namespace std;
 
 class Grupo {
 private:
+	string ID;
+	string nombre;
+	int cupoMaximo;
+	int durarcion;
+	Fecha* fecha;
+	Horario* horario;
+public:
 	string instructorID();
 	string nombreInstructor();
 
