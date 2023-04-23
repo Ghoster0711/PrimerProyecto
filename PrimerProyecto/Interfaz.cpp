@@ -1,12 +1,6 @@
 #include "Interfaz.h"
 
-void Interfaz::bienvenida(Gym gym) {
-	//int dia, mes, anio;
-	cout << "\t\t BIENVENIDOS AL GIMNASIO ";
-	if (gym.getNombre() != "")
-		cout << gym.getNombre() << endl;
-	else
-		cout << endl;
+void Interfaz::bienvenida() {
 
 }
 

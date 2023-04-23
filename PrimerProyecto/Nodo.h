@@ -2,6 +2,7 @@
 
 #include "Deportista.h"
 #include "Curso.h"
+#include "HistorialDePago.h"
 
 template<class T>
 class Nodo {

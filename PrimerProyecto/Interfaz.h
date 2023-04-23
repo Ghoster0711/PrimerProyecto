@@ -7,7 +7,7 @@ using namespace std;
 
 class Interfaz {
 public:
-	static void bienvenida(Gym);
+	static void bienvenida();
 	static void menu();
 	static void administracionGeneral();
 	static void controlDeDeportistas();

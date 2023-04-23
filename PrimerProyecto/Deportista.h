@@ -2,7 +2,6 @@
 #include "Fecha.h"
 #include "Ciclista.h"
 #include "Nadador.h"
-#include "HistorialDePago.h"
 
 
 class Deportista {
@@ -11,7 +10,7 @@ protected:
 	string nombre;
 	string telefono;
 	Fecha* fecha;
-	HistorialDePago* historial;
+
 	
 public:
 	Deportista(string, string, string, Fecha*);
@@ -32,9 +31,7 @@ public:
 	virtual double getProcGrasaCorporal() = 0;
 	virtual int getHorasEntrenadas() = 0;
 	virtual double getTemPromedio() = 0;
-	virtual HistorialDePago* getHistoria() = 0;
-
-	virtual void setHistorialDePago(HistorialDePago*) = 0;
+	
 	virtual void setHorasEntrenadas(int) = 0;
 	virtual void setTemPromedio(double) = 0;
 	virtual void setMasaMuscular(double) = 0;
