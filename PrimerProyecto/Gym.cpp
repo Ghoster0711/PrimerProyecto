@@ -13,15 +13,13 @@ Gym::~Gym() {}
 
 
 //Contenedor<Deportista>* Gym::getCOD() { return COD; }
-//
-//
+
 //Contenedor<Curso>* Gym::getCOC() { return COC; }
 
 
 string Gym::getNombre() { return nombre; }
 
 double Gym::getMensualidad() { return mensualidad; }
-
 
 void Gym::getMensualidad(double men) { mensualidad = men; }
 

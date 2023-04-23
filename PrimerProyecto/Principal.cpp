@@ -66,8 +66,8 @@ int main() {
 				}
 			break;
 			case 5:
-				cin >> op;
 				Interfaz::controlPagos();
+				cin >> op;
 				switch (op) {
 				case 1:
 					break;
