@@ -3,25 +3,85 @@
 using namespace std;
 
 int main() {
-	bool salir = false;
-	int opcion;
+	bool salir = true;
+	int opcion = 0;
+	int op = 0;
 	while (salir) {
 		Interfaz::menu();
 		cin >> opcion;
 		switch (opcion) {
 			case 1:
-				break;
+				Interfaz::administracionGeneral();
+				cin >> op;
+				switch (op) {
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				}
+			break;
 			case 2:
-				break;  
+				Interfaz::controlDeDeportistas();
+				cin >> op;
+				switch (op) {
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				}
+			break;  
 			case 3:
-				break;
+				Interfaz::controlDeCursos();
+				cin >> op;
+				switch (op) {
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				}
+			break;
 			case 4:
-				break;
+				Interfaz::controlDeGrupos();
+				cin >> op;
+				switch (op) {
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				}
+			break;
 			case 5:
-				break;
+				cin >> op;
+				Interfaz::controlPagos();
+				switch (op) {
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				}
+			break;
 			case 6:
-				break;
+				salir = false;
+			break;
 		}
+		system("color 07");
+		system("cls");
 	}
 
 
