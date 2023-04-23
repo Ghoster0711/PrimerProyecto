@@ -132,7 +132,6 @@
     <ClCompile Include="Grupo.cpp" />
     <ClCompile Include="Grupo.h" />
     <ClCompile Include="Gym.cpp" />
-    <ClCompile Include="Instructor.cpp" />
     <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Principal.cpp" />
@@ -158,7 +157,6 @@
     <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Interfaz.h" />
-    <ClInclude Include="Instructor.h" />
     <ClInclude Include="Nadador.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="ServicioFechas.h" />
