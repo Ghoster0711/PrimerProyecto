@@ -1,11 +1,14 @@
 #include "Gym.h"
 #include "Interfaz.h"
+
 using namespace std;
 
 int main() {
 	bool salir = true;
 	int opcion = 0;
 	int op = 0;
+	Gym gimnasio = new Gym();
+	Interfaz::bienvenida(gimnasio);
 	while (salir) {
 		Interfaz::menu();
 		cin >> opcion;

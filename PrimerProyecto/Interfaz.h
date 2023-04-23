@@ -1,11 +1,12 @@
 #pragma once
+#include <ctime>
 #include <iostream>
 #include <sstream>
 using namespace std;
 
 class Interfaz {
 public:
-	static void bienvenida();
+	static void bienvenida(Gym<void>*);
 	static void menu();
 	static void administracionGeneral();
 	static void controlDeDeportistas();
@@ -14,7 +15,19 @@ public:
 	static void controlPagos();
 };
 
-void Interfaz::bienvenida(){}
+void Interfaz::bienvenida(Gym* gym){
+	int dia, mes, anio;
+	cout << "\t\t BIENVENIDOS AL GIMNASIO ";
+	if (gym->getNombre() != "")
+		cout << gym->getNombre() << endl;
+	else
+		cout << endl;
+	cout << "Ingrese la fecha actual(dd/mm/aaaa): ";
+
+	cin >> dia >> mes >> anio;
+	Fecha* f = new Fecha(dia, mes, anio);
+	gym->setFec(f);
+}
 
 void Interfaz::menu(){
 	cout << "\t\t MENU PRINCIPAL" << endl;

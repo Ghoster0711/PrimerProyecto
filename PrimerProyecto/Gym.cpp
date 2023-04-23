@@ -1,16 +1,37 @@
 #include "Gym.h"
 
-template<class T>
-Gym<T>::Gym(){
+ 
+Gym::Gym(){
+	nombre = "";
+	mensualidad = 0;
 	COD = new Contenedor<Deportista*>();
-
+	COC = new Contenedor<Curso*>();
 }
 
-template<class T>
-Gym<T>::~Gym(){}
+ 
+Gym::~Gym() {}
 
-template<class T>
-Contenedor<Deportista*> Gym<T>::getCOD() { return COD; }
+ 
+Contenedor<Deportista*> Gym::getCOD() { return COD; }
 
-template<class T>
-Contenedor<Curso*> Gym<T>::getCOC() { return COC; }
+ 
+Contenedor<Curso*> Gym::getCOC() { return COC; }
+
+ 
+string Gym::getNombre() { return nombre; }
+ 
+double Gym::getMensualidad() { return mensualidad; }
+ 
+Fecha* Gym::getFecha() { return fec; }
+ 
+
+ 
+void Gym::setFec(Fecha* actual) { fec = actual; }
+
+ 
+void Gym::getMensualidad(double men) { mensualidad = men; }
+ 
+void Gym::setNombre(string nom) { nombre = nom; }
+
+
+ 
