@@ -4,22 +4,22 @@
 Gym::Gym(){
 	nombre = "";
 	mensualidad = 0;
-	/*COD = new Contenedor<Deportista>();
-	COC = new Contenedor<Curso>();*/
+	/*COD = new Contenedor<Nodo<Triatlonista>>();
+	COC = new Contenedor<Nodo<Curso>>();*/
 }
 
 
 Gym::~Gym() {}
 
 
-//Contenedor<Deportista>* Gym::getCOD() { return COD; }
-
-//Contenedor<Curso>* Gym::getCOC() { return COC; }
+//Contenedor<Nodo<Triatlonista>>* Gym::getCOD() const { return COD; }
+//Contenedor<Nodo<Curso>>* Gym::getCOC() const { return COC; }
 
 
 string Gym::getNombre() { return nombre; }
 
 double Gym::getMensualidad() { return mensualidad; }
+
 
 void Gym::getMensualidad(double men) { mensualidad = men; }
 
