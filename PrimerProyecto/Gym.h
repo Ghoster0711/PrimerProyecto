@@ -1,18 +1,18 @@
 #pragma once
 #include "Contenedor.h"
-template<class T>
+
 class Gym {
 private:
 	string nombre;
 	double mensualidad;
-	Contenedor<Deportista*> COD;
-	Contenedor<Curso*> COC;
+	Contenedor<Deportista>* COD;
+	Contenedor<Curso>* COC;
 public:
 	Gym();
 	virtual ~Gym();
 
-	Contenedor<Deportista*> getCOD();
-	Contenedor<Curso*> getCOC();
+	Contenedor<Deportista>* getCOD();
+	Contenedor<Curso>* getCOC();
 
 	string getNombre();
 	double getMensualidad();

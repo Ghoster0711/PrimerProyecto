@@ -6,7 +6,7 @@ using namespace std;
 
 class Interfaz {
 public:
-	static void bienvenida(Gym<void>*);
+	static void bienvenida(Gym*);
 	static void menu();
 	static void administracionGeneral();
 	static void controlDeDeportistas();
@@ -15,7 +15,7 @@ public:
 	static void controlPagos();
 };
 
-void Interfaz::bienvenida(Gym<void>* gym){
+void Interfaz::bienvenida(Gym* gym){
 	int dia, mes, anio;
 	cout << "\t\t BIENVENIDOS AL GIMNASIO ";
 	if (gym->getNombre() != "")
