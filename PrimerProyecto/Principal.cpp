@@ -7,8 +7,9 @@ int main() {
 	bool salir = true;
 	int opcion = 0;
 	int op = 0;
-	Gym gimnasio = new Gym();
-	Interfaz::bienvenida(gimnasio);
+	Gym<void> gimnasio;
+	Interfaz::bienvenida(&gimnasio);
+	cout << "Ingrese la fecha actual(dd/mm/aaaa): ";
 	while (salir) {
 		Interfaz::menu();
 		cin >> opcion;

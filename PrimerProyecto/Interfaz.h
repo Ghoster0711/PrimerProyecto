@@ -15,18 +15,14 @@ public:
 	static void controlPagos();
 };
 
-void Interfaz::bienvenida(Gym* gym){
+void Interfaz::bienvenida(Gym<void>* gym){
 	int dia, mes, anio;
 	cout << "\t\t BIENVENIDOS AL GIMNASIO ";
 	if (gym->getNombre() != "")
 		cout << gym->getNombre() << endl;
 	else
 		cout << endl;
-	cout << "Ingrese la fecha actual(dd/mm/aaaa): ";
-
-	cin >> dia >> mes >> anio;
-	Fecha* f = new Fecha(dia, mes, anio);
-	gym->setFec(f);
+	
 }
 
 void Interfaz::menu(){
