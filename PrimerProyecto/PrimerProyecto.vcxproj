@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
     <ClCompile Include="Contenedor.cpp" />
+    <ClCompile Include="Grupo.cpp" />
+    <ClCompile Include="Grupo.h" />
     <ClCompile Include="Gym.cpp" />
     <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="Nodo.cpp" />

@@ -5,14 +5,14 @@ class Gym {
 private:
 	string nombre;
 	double mensualidad;
-	//Contenedor<Deportista*> COD;
-	//Contenedor<Curso*> COC;
+	/*Contenedor<Nodo<Triatlonista>>* COD;
+	Contenedor<Nodo<Curso>>* COC;*/
 public:
 	Gym();
 	virtual ~Gym();
 
-	//Contenedor<Deportista>* getCOD();
-	//Contenedor<Curso>* getCOC();
+	/*Contenedor<Nodo<Triatlonista>>* getCOD() const;
+	Contenedor<Nodo<Curso>>* getCOC() const;*/
 
 	string getNombre();
 	double getMensualidad();
