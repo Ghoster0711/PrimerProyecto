@@ -13,6 +13,7 @@ Grupo::Grupo(string id, string nom, int cM, int d, Fecha* fec, Horario* hor) {
 	duracion = d;
 	fecha = fec;
 	horario = hor;
+	cant = 0;
 	vec = new Triatlonista * [cupoMaximo];
 	for (int i = 0; i < cupoMaximo; i++) {
 		vec[i] = NULL;
@@ -23,6 +24,9 @@ Grupo:: ~Grupo() {
 		delete fecha;
 	if (horario != NULL)
 		delete horario;
+	for (int i = 0; i < cant; i++)
+		delete vec[i];
+	delete[] vec;
 }
 bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	if (cant < cupoMaximo) {
@@ -32,12 +36,22 @@ bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	else
 		return false;
 }
-bool Grupo::eliminarTritlonista(string ID){
-	for (int i = 0; i < cant; i++) {
-		if (vec[i]->getCedula() == ID) {
-
+bool Grupo::eliminarTritlonista(string id){
+	if (cant != 0) {
+		for (int i = 0; i < cant; i++) {
+			if (vec[i]->getCedula() == id) {
+				delete vec[i];
+				vec[i] = NULL;
+				for (int j = i; j < cant; j++) {
+					vec[j] = vec[j + 1];
+				}
+				vec[cant] = NULL;
+				cant--;
+				return true;
+			}
 		}
 	}
+	return false;
 }
 int Grupo::getCant(){}
 string Grupo::getIDInstructor() { return IDInst; }
