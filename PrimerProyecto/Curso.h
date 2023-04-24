@@ -7,8 +7,8 @@ private:
     string nombre;
     string descripcion;
     string nivel;
-    int cantidadGrupos;
-    Grupo** vec;
+    //int cantidadGrupos;
+    //Grupo** vec;
 
 public:
     Curso();
@@ -18,18 +18,10 @@ public:
     string getNombre();
     string getDescription();
     string getNivel();
-    int getCantidadGrupos();
     void setCodigo(string);
     void setNombre(string);
     void setDescripcion(string);
     void setNivel(string);
     string toString();
-    void ingresarGrupo(Grupo*);
-
-    string imprimeDeportistas();
-    string imprimeHorarios();
-    
-
-   
-
+    //void ingresarGrupo(Grupo*);
 };
