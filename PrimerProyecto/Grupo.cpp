@@ -68,11 +68,13 @@ void Grupo::setFecha(Fecha* fec) { fecha = fec; }
 void Grupo::setHorario(Horario* hor) { horario = hor; }
 string Grupo::toString() {
 	stringstream s;
-	s<<"ID del Instructor: "<<IDInst<<endl
-		<<"Nombre del Instructor: "<<nombreInst<<endl
-		<<"Cupo Maximo: "<<cupoMaximo<<endl
-		<<""
-
-
+	s << "ID del Instructor: " << IDInst << endl
+		<< "Nombre del Instructor: " << nombreInst << endl
+		<< "Cupo Maximo: " << cupoMaximo << endl
+		<< "Cantidad Matriculados: " << cant << endl
+		<< "Semanas de duracion: " << duracion << endl
+		<< "Dia: " << horario->getDia() << endl
+		<< "Horario: " << horario->getHoraI() << " - " << horario->getHoraF() << endl;
+	return s.str();
 
 }

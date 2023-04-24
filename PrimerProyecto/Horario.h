@@ -8,18 +8,18 @@ using namespace std;
 class Horario {
 private:
     string dia;
-    int hora;
-    int minuto;
+    int horaI;
+    int horaF;
 public:
     Horario();
     Horario(string, int, int);
     virtual ~Horario();
     string getDia();
-    int getHora();
-    int getMinuto();
+    int getHoraI();
+    int getHoraF();
     void setDia(string);
-    void setHora(int);
-    void setMinuto(int);
+    void setHoraI(int);
+    void setHoraF(int);
     string toString();
 
 };
