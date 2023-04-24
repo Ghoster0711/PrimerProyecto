@@ -36,5 +36,4 @@ public:
 	void setFecha(Fecha*);
 	void setHorario(Horario*);
 	string toString();
-
 };
