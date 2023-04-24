@@ -15,7 +15,7 @@ private:
 	int duracion;
 	Fecha* fecha;
 	Horario* horario;
-	Triatlonista* vec;
+	Triatlonista** vec;
 	int cant;
 public:
 	Grupo(string, string, int, int, Fecha*, Horario*);
