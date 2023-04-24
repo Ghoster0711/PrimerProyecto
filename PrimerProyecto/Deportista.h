@@ -11,11 +11,9 @@ protected:
 	string telefono;
 	Fecha* fecha;
 
-	
 public:
 	Deportista(string, string, string, Fecha*);
 	virtual ~Deportista();
-
 	virtual string getCedula() = 0;
 	virtual string getNombre() = 0;
 	virtual string getTelefono() = 0;
