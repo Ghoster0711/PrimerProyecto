@@ -20,15 +20,13 @@ private:
 public:
 	Grupo(string, string, int, int, Fecha*, Horario*);
 	virtual ~Grupo();
-	bool ingresarTritlonista(Triatlonista*);
-	bool eliminarTritlonista(string);
-	int getCant();
 	string getIDInstructor();
 	string getNombreInstructor();
 	int getCupoMaximo();
 	int getDuracion();
 	Fecha* getFecha();
 	Horario* getHorario();
+	int getCant();
 	void setID(string);
 	void setNombre(string);
 	void setCupoMaximo(int);
@@ -36,5 +34,7 @@ public:
 	void setFecha(Fecha*);
 	void setHorario(Horario*);
 	string toString();
+	bool ingresarTritlonista(Triatlonista*);
+	bool eliminarTritlonista(string);
 	string listaDeMatriculados();
 };
