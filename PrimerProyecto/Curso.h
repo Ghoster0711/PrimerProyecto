@@ -1,15 +1,14 @@
 #pragma once
-#include "Horario.h"
-#include "Deportista.h"
+#include"Grupo.h"
 
 class Curso {
 private:
+    string codigo;
     string nombre;
     string descripcion;
     string nivel;
-    int cupoMaximo;
-    Deportista** reserva;
-    Horario** horario;
+    int cantidadGrupos;
+    Grupo* vec;
     int cantD;
     int tamD;
     int cantH;
