@@ -6,30 +6,24 @@ private:
     string codigo;
     string nombre;
     string descripcion;
-    string nivel;
-    int cantidadGrupos;
-    Grupo* vec;
-    int cantD;
-    int tamD;
-    int cantH;
+    string nivel; 
 
 public:
     Curso();
     Curso(string, string, string, int);
     virtual ~Curso();
+    string getCodigo();
     string getNombre();
     string getDescription();
     string getNivel();
-    int getCupoMaximo();
+
+    void setCodigo(string);
     void setNombre(string);
     void setDescripcion(string);
     void setNivel(string);
-    void setCupoMaximo(int);
-    void ingresarHorario(Horario*);
-    void ingresarReserva(Deportista*);
+
     //Faltan metodos para recorrer los vectores
-    string imprimeDeportistas();
-    string imprimeHorarios();
+ 
     string toString();
 
     //Hacer los demas metodos

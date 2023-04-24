@@ -19,6 +19,7 @@ Grupo::Grupo(string id, string nom, int cM, int d, Fecha* fec, Horario* hor) {
 		vec[i] = NULL;
 	}
 }
+
 Grupo:: ~Grupo() {
 	if (fecha != NULL)
 		delete fecha;
@@ -28,6 +29,7 @@ Grupo:: ~Grupo() {
 		delete vec[i];
 	delete[] vec;
 }
+
 bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	if (cant < cupoMaximo) {
 		vec[cant++] = triatlonista;
@@ -36,6 +38,7 @@ bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	else
 		return false;
 }
+
 bool Grupo::eliminarTritlonista(string id){
 	if (cant != 0) {
 		for (int i = 0; i < cant; i++) {
@@ -53,19 +56,59 @@ bool Grupo::eliminarTritlonista(string id){
 	}
 	return false;
 }
-int Grupo::getCant(){}
-string Grupo::getIDInstructor() { return IDInst; }
-string Grupo::getNombreInstructor() { return nombreInst; }
-int Grupo::getCupoMaximo() { return cupoMaximo; }
-int Grupo::getDuracion() { return duracion; }
-Fecha* Grupo::getFecha() { return fecha; }
-Horario* Grupo::getHorario() { return horario; }
-void Grupo::setID(string id) { IDInst = id; }
-void Grupo::setNombre(string nom) { nombreInst = nom; }
-void Grupo::setCupoMaximo(int cM) { cupoMaximo = cM; }
-void Grupo::setDurarcion(int d) { duracion = d; }
-void Grupo::setFecha(Fecha* fec) { fecha = fec; }
-void Grupo::setHorario(Horario* hor) { horario = hor; }
+
+int Grupo::getCant() {
+	return cant;
+}
+
+string Grupo::getIDInstructor() { 
+	return IDInst; 
+}
+
+string Grupo::getNombreInstructor() {
+	return nombreInst; 
+}
+
+int Grupo::getCupoMaximo() { 
+	return cupoMaximo; 
+}
+
+int Grupo::getDuracion() { 
+	return duracion; 
+}
+
+Fecha* Grupo::getFecha() { 
+	return fecha; 
+}
+
+Horario* Grupo::getHorario() {
+	return horario;
+}
+
+void Grupo::setID(string id) {
+	IDInst = id;
+}
+
+void Grupo::setNombre(string nom) {
+	nombreInst = nom;
+}
+
+void Grupo::setCupoMaximo(int cM) { 
+	cupoMaximo = cM; 
+}
+
+void Grupo::setDurarcion(int d) { 
+	duracion = d; 
+}
+
+void Grupo::setFecha(Fecha* fec) {
+	fecha = fec;
+}
+
+void Grupo::setHorario(Horario* hor) {
+	horario = hor; 
+}
+
 string Grupo::toString() {
 	stringstream s;
 	s << "ID del Instructor: " << IDInst << endl

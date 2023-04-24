@@ -1,77 +1,42 @@
 #include "Curso.h"
 
 Curso::Curso()
-	:nombre(""), descripcion(""), nivel(""), cupoMaximo(0), cantD(0), cantH(0), tamD(0) {
-	reserva = new Deportista * [tamD];
-	horario = new Horario * [7];
-	for (int i = 0; i < tamD; i++)
-		reserva[i] = NULL;
-	for (int i = 0; i < 7; i++)
-		horario[i] = NULL;
+	:nombre(""), descripcion(""), nivel("") {
+
+
 }
 Curso::Curso(string nom, string desc, string niv, int cupo)
-	:nombre(nom), descripcion(desc), nivel(niv), cupoMaximo(cupo), tamD(cupo), cantD(0), cantH(0){
-	reserva = new Deportista * [tamD];
-	horario = new Horario * [7];
-	for (int i = 0; i < tamD; i++)
-		reserva[i] = NULL;
-	for (int i = 0; i < 7; i++)
-		horario[i] = NULL;
+	:nombre(nom), descripcion(desc), nivel(niv){
+
 }
 Curso::~Curso() {
-	for (int i = 0; i < tamD; i++)
-		if (reserva[i] != NULL)
-			delete reserva[i];
-	delete[] reserva;
-	for (int i = 0; i < 7; i++)
-		if (horario[i] != NULL)
-			delete horario[i];
-	delete[] horario;
+
 }
+
+string Curso::getCodigo() { return codigo; }
+
 string Curso::getNombre() { return nombre; }
+
 string Curso::getDescription() { return descripcion; }
+
 string Curso::getNivel() { return nivel; }
-int Curso::getCupoMaximo() { return cupoMaximo; }
+
+void Curso::setCodigo(string cod) { codigo = cod; }
+
 void Curso::setNombre(string nom) { nombre = nom; }
+
 void Curso::setDescripcion(string desc) { descripcion = desc; }
+
 void Curso::setNivel(string niv) { nivel = niv; }
-void Curso::setCupoMaximo(int cupo) { cupoMaximo = cupo; }
-void Curso::ingresarHorario(Horario* horar){
-	if (cantH < 7)
-		horario[cantH++] = horar;
-}
-void Curso::ingresarReserva(Deportista* depo) {
-	if (cantD < tamD)
-		reserva[cantD++] = depo;
-}
-string Curso::imprimeDeportistas() {
-	stringstream show;
-	show << "-------------Lista de Integrantes-------------" << endl;
-	for (int i = 0; i < cantD; i++) {
-		show << "Nombre: " << reserva[i]->getNombre() << endl
-			<< "Cedula: " << reserva[i]->getCedula() << endl
-			<< "Telefono: " << reserva[i]->getTelefono() << endl
-			<< endl;
-	}
-	return show.str();
-}
-string Curso::imprimeHorarios() {
-	stringstream show;
-	show << "------------------Horarios------------------" << endl;
-	for (int i = 0; i < cantH; i++) {
-		show << horario[i]->toString();
-	}
-	return show.str();
-}
+
+
 string Curso::toString() {
 	stringstream show;
 	show << "------------------------------------------------" << endl
+		<< "| Codigo del curso: " << codigo << endl
 		<< "| Nombre del curso:" << nombre << endl
 		<< "| Descripcion del curso: " << descripcion << endl
-		<< "| Nivel del curos: " << nivel << endl
-		<< "| Cupo Maximo del curso: " << cupoMaximo << endl
-		<< imprimeDeportistas() << endl
-		<< imprimeHorarios() << endl;
+		<< "| Nivel del curso: " << nivel << endl;
 
 	return show.str();
 }
