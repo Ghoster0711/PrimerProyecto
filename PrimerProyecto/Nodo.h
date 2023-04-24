@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Triatlonista.h"
 #include "Curso.h"
 #include "HistorialDePago.h"

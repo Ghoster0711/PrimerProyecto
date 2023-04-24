@@ -1,3 +1,4 @@
+#pragma once
 #include "Corredor.h"
 #include "Nadador.h"
 #include "Ciclista.h"
