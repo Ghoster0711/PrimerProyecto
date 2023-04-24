@@ -32,7 +32,13 @@ bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	else
 		return false;
 }
-bool Grupo::eliminarTritlonista(string ID){}
+bool Grupo::eliminarTritlonista(string ID){
+	for (int i = 0; i < cant; i++) {
+		if (vec[i]->getCedula() == ID) {
+
+		}
+	}
+}
 int Grupo::getCant(){}
 string Grupo::getIDInstructor() { return IDInst; }
 string Grupo::getNombreInstructor() { return nombreInst; }
