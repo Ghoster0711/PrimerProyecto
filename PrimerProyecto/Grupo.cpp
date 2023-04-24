@@ -76,5 +76,11 @@ string Grupo::toString() {
 		<< "Dia: " << horario->getDia() << endl
 		<< "Horario: " << horario->getHoraI() << " - " << horario->getHoraF() << endl;
 	return s.str();
-
+}
+string Grupo::listaDeMatriculados() {
+	stringstream s;
+	for (int i = 0; i < cant; i++) {
+		s << vec[i]->getCedula() << "  " << vec[i]->getNombre() << endl;
+	}
+	return s.str();
 }
