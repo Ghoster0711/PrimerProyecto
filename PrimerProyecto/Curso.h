@@ -21,6 +21,7 @@ public:
     void setCodigo(string);
     void setNombre(string);
     void setDescripcion(string);
+    void setNivel(string);
     string toString();
     //void ingresarGrupo(Grupo*);
 };

@@ -10,7 +10,7 @@ private:
 	Nodo<T>* siguiente;
 public:
 	Nodo();
-	Nodo(T*);
+	Nodo(T*, Nodo<T>*);
 	virtual ~Nodo();
 
 	T* getDato();
@@ -27,9 +27,9 @@ Nodo<T>::Nodo() {
 }
 
 template<class T>
-Nodo<T>::Nodo(T* dato) {
+Nodo<T>::Nodo(T* dato, Nodo<T>* sig) {
 	this->dato = dato;
-	this->siguiente = NULL;
+	this->siguiente = sig;
 }
 
 template<class T>

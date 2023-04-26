@@ -38,20 +38,9 @@ bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	else
 		return false;
 }
-bool Grupo::eliminarTritlonista(string ID){}
-int Grupo::getCant(){}
-string Grupo::getIDInstructor() { return IDInst; }
-string Grupo::getNombreInstructor() { return nombreInst; }
-int Grupo::getCupoMaximo() { return cupoMaximo; }
-int Grupo::getDuracion() { return duracion; }
-Fecha* Grupo::getFecha() { return fecha; }
-Horario* Grupo::getHorario() { return horario; }
-void Grupo::setID(string id) { IDInst = id; }
-void Grupo::setNombre(string nom) { nombreInst = nom; }
-void Grupo::setCupoMaximo(int cM) { cupoMaximo = cM; }
-void Grupo::setDurarcion(int d) { duracion = d; }
-void Grupo::setFecha(Fecha* fec) { fecha = fec; }
-void Grupo::setHorario(Horario* hor) { horario = hor; }
+
+
+
 bool Grupo::eliminarTritlonista(string id){
 	if (cant != 0) {
 		for (int i = 0; i < cant; i++) {
@@ -123,11 +112,11 @@ void Grupo::setHorario(Horario* hor) {
 }
 string Grupo::toString() {
 	stringstream s;
-	s<<"ID del Instructor: "<<IDInst<<endl
-		<<"Nombre del Instructor: "<<nombreInst<<endl
-		<<"Cupo Maximo: "<<cupoMaximo<<endl
-		<<""
+	s << "ID del Instructor: " << IDInst << endl
+		<< "Nombre del Instructor: " << nombreInst << endl
+		<< "Cupo Maximo: " << cupoMaximo << endl
+		<< "";
 
 
-
+	return s.str();
 }
