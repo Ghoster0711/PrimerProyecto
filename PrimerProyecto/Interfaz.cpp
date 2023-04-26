@@ -120,11 +120,12 @@ void Interfaz::ingresarCurso(Gym* gym) {
 	cin >> cod;
 	cout << "Digite el nombre del curso: " << endl;
 	cin >> nom;
-	cout << "Cantidad de grupos: " << endl;
-	cin >> cant;
+	cout << "Digite el nivel: " << niv;
+	/*cout << "Cantidad de grupos: " << endl;
+	cin >> cant;*/
 	cout << "Descripcion: " << descrip;
 
-	Curso* curso = new Curso(cod, nom, cant, descrip);
+	Curso* curso = new Curso(cod, nom, niv, descrip);
 	gym->getCOC()->ingresar(curso);
 
 }
