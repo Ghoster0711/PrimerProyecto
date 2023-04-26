@@ -81,7 +81,7 @@
     <ClCompile Include="ExcepcionID.cpp">
       <Filter>Source Files\ExcepcionesUsuario</Filter>
     </ClCompile>
-    <ClCompile Include="ExcepcionGrupoRango.cpp">
+    <ClCompile Include="ExcepcionGrupoLleno.cpp">
       <Filter>Source Files\ExcepcionesUsuario</Filter>
     </ClCompile>
     <ClCompile Include="ExcepcionCodigo.cpp">

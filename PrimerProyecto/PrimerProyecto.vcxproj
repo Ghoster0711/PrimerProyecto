@@ -130,7 +130,7 @@
     <ClCompile Include="Ciclista.cpp" />
     <ClCompile Include="ExcepcionCodigo.cpp" />
     <ClCompile Include="Excepciones.cpp" />
-    <ClCompile Include="ExcepcionGrupoRango.cpp" />
+    <ClCompile Include="ExcepcionGrupoLleno.cpp" />
     <ClCompile Include="ExcepcionID.cpp" />
     <ClCompile Include="ExcepcionRango.cpp" />
     <ClCompile Include="Grupo.cpp" />
