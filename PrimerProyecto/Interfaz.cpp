@@ -83,7 +83,8 @@ void Interfaz::ingresaDeportista(Gym* gym){
 
 
 	Fecha* x = new Fecha(dia, mes, anio);
-	gym->getCOD()->ingresar(Deportista* d = new Triatlonista(ced, nom, tel, x, sex,)
+	Deportista* d = new Triatlonista(ced, nom, tel, x, sex, );
+	gym->getCOD()->ingresar(d);
 
 
 	
