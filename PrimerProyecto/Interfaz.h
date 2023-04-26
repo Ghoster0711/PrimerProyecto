@@ -27,7 +27,6 @@ public:
 
 	//Control de Grupos 
 	static void controlDeGrupos();
-	
 
 	//Control de Pagos 
 	static void controlPagos();
