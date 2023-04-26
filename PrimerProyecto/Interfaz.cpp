@@ -79,6 +79,13 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	cout << "\t Cantidad de triatlones ganados: " << endl;
 	cin >> ganados;
 	cout << "Datos Biometrico basico" << endl;
+	cout << "\t Estatura: " << endl;
+
+	cout << "\t : " << endl;
+
+	cout << "\t : " << endl;
+
+	cout << "\t : " << endl;
 
 
 
