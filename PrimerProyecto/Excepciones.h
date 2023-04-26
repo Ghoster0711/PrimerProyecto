@@ -8,5 +8,5 @@ class Excepciones {
 public:
 	Excepciones();
 	virtual ~Excepciones();
-	string toString();
+	virtual string toString() const = 0;
 };
