@@ -1,12 +1,10 @@
 #pragma once
 #include "Nodo.h"
-#include "Iterador.h"
 
 template<class T>
 class Contenedor{
 private:
 	Nodo<T>* _primero;
-	Iterador<T>* ite;
 	int cantidad;
 public:
 	Contenedor();
@@ -20,7 +18,6 @@ public:
 template<class T>
 Contenedor<T>::Contenedor() {
 	_primero = NULL;
-	ite = new Iterador(_primero);
 	cantidad = 0;
 }
 
@@ -37,5 +34,4 @@ bool Contenedor<T>::ingresar(T* dato) {
 
 template<class T>
 void Contenedor<T>::visualizar() {
-	ite->visualizar(_primero);
 }

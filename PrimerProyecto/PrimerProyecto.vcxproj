@@ -165,7 +165,6 @@
     <ClInclude Include="HistorialDePago.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Interfaz.h" />
-    <ClInclude Include="Iterador.h" />
     <ClInclude Include="Nadador.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="ServicioFechas.h" />
