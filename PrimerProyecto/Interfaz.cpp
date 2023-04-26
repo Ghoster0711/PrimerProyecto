@@ -89,14 +89,9 @@ void Interfaz::ingresaDeportista(Gym* gym){
 
 
 
-	Fecha* x = new Fecha(dia, mes, anio);
-	Deportista* d = new Triatlonista(ced, nom, tel, x, sex, );
-	gym->getCOD()->ingresar(d);
-
-
 	
 }
-string ced, string nom, string tel, Fecha* fec, char sex, double est, int cantP, int cantT, int horasEntrenas, double temPro, double masa, double peso, double porcG
+
 void Interfaz::modificaDeportista(Gym*){
 	
 }
@@ -135,7 +130,8 @@ void Interfaz::ingresarCurso(Gym* gym) {
 }
 void Interfaz::reporteDeCurso(Gym* gym) {
 
-	
+	cout << "Listado de cursos: " << endl;
+	cout<<"\t "<<g
 
 
 }
