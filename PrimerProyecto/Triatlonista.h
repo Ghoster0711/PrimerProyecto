@@ -13,7 +13,6 @@ public:
 	Triatlonista(string, string, string, Fecha*, char, double, int, int, int, double, double, double, double);
 	virtual ~Triatlonista();
 
-
 	string getCedula();
 	string getNombre();
 	string getTelefono();
