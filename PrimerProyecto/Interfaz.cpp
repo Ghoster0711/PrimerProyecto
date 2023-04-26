@@ -57,10 +57,11 @@ void Interfaz::controlDeDeportistas() {
 
 void Interfaz::ingresaDeportista(Gym* gym){
 	string id, tel, nom;
+	double est, masa, peso, grasa;
 	int dia, mes, anio, horas, iron, ganados;
 	char sex;
 
-	cout << "Control de Deportista >> Ingresar Nuevo Deportista" << endl << endl;
+	cout << "Control de Deportista >> Ingreso Nuevo Deportista" << endl << endl;
 	cout << "Datos Generales:" << endl;
 	cout << "\t ID: " << endl;
 	cin >> id;
@@ -80,23 +81,24 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	cin >> ganados;
 	cout << "Datos Biometrico basico" << endl;
 	cout << "\t Estatura: " << endl;
-
-	cout << "\t : " << endl;
-
-	cout << "\t : " << endl;
-
-	cout << "\t : " << endl;
-
+	cin >> est;
+	cout << "\t Peso: " << endl;
+	cin >> peso;
+	cout << "\t Grasa Corporal: " << endl;
+	cin >> grasa;
+	cout << "\t Masa Muscular: " << endl;
+	cin >> masa;
 
 
 	Fecha* x = new Fecha(dia, mes, anio);
-	Deportista* d = new Triatlonista(ced, nom, tel, x, sex, );
+	Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
 	gym->getCOD()->ingresar(d);
+	delete d;
 
 
 	
 }
-string ced, string nom, string tel, Fecha* fec, char sex, double est, int cantP, int cantT, int horasEntrenas, double temPro, double masa, double peso, double porcG
+
 void Interfaz::modificaDeportista(Gym*){
 	
 }
@@ -116,7 +118,31 @@ void Interfaz::controlDeCursos() {
 		<< "4. Volver" << endl
 		<< endl << "Digite una opcion del menu: ";
 }
+void Interfaz::ingresarCurso(Gym* gym) {
+	string cod, nom, niv, descrip;
+	int cant;
 
+	cout << "Control de Cursos >> Ingreso nuevo curso" << endl;
+	cout << "Digite el codigo del curso: " << endl;
+	cin >> cod;
+	cout << "Digite el nombre del curso: " << endl;
+	cin >> nom;
+	cout << "Digite el nivel: " << niv;
+	/*cout << "Cantidad de grupos: " << endl;
+	cin >> cant;*/
+	cout << "Descripcion: " << descrip;
+
+	Curso* curso = new Curso(cod, nom, niv, descrip);
+	gym->getCOC()->ingresar(curso);
+
+}
+void Interfaz::reporteDeCurso(Gym* gym) {
+
+	cout << "Listado de cursos: " << endl;
+	cout<<"\t "<<g
+
+
+}
 void Interfaz::controlDeGrupos() {
 	system("color E5");
 	cout << "\t\t CONTROL DE GRUPOS" << endl

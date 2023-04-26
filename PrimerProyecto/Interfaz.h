@@ -18,11 +18,9 @@ public:
 	static void ingresaDeportista(Gym*);
 	static void modificaDeportista(Gym*);
 	static void listaDeporsita(Gym*);
-
 	//Control de Cursos 
 	static void controlDeCursos();
 	static void ingresarCurso(Gym*);
-	static void reporteDeCurso(Gym*);
 
 
 	//Control de Grupos 
