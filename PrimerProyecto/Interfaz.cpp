@@ -61,7 +61,7 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	int dia, mes, anio, horas, iron, ganados;
 	char sex;
 
-	cout << "Control de Deportista >> Ingresar Nuevo Deportista" << endl << endl;
+	cout << "Control de Deportista >> Ingreso Nuevo Deportista" << endl << endl;
 	cout << "Datos Generales:" << endl;
 	cout << "\t ID: " << endl;
 	cin >> id;
@@ -118,7 +118,31 @@ void Interfaz::controlDeCursos() {
 		<< "4. Volver" << endl
 		<< endl << "Digite una opcion del menu: ";
 }
+void Interfaz::ingresarCurso(Gym* gym) {
+	string cod, nom, niv, descrip;
+	int cant;
 
+	cout << "Control de Cursos >> Ingreso nuevo curso" << endl;
+	cout << "Digite el codigo del curso: " << endl;
+	cin >> cod;
+	cout << "Digite el nombre del curso: " << endl;
+	cin >> nom;
+	cout << "Digite el nivel: " << niv;
+	/*cout << "Cantidad de grupos: " << endl;
+	cin >> cant;*/
+	cout << "Descripcion: " << descrip;
+
+	Curso* curso = new Curso(cod, nom, niv, descrip);
+	gym->getCOC()->ingresar(curso);
+
+}
+void Interfaz::reporteDeCurso(Gym* gym) {
+
+	cout << "Listado de cursos: " << endl;
+	cout<<"\t "<<g
+
+
+}
 void Interfaz::controlDeGrupos() {
 	system("color E5");
 	cout << "\t\t CONTROL DE GRUPOS" << endl
