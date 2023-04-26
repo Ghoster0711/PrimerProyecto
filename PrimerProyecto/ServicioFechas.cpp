@@ -7,7 +7,7 @@ string ServicioFechas::diferenciaFechas(Fecha* fecha1, Fecha* fecha2) {
 	int respFech, respMes;
 	stringstream s;
 
-	//Fecha1   fecha inicial(fechNac) 
+	//Fecha1   fecha inicial(fechAnt) 
 	anioFecha1 = fecha1->getAnio();
 	mesFecha1 = fecha1->getMes();
 	diaFecha1 = fecha1->getDia();
@@ -38,6 +38,6 @@ string ServicioFechas::diferenciaFechas(Fecha* fecha1, Fecha* fecha2) {
 		<< " con " << respMes << " meses y " << respFech << " dias" << endl;
 	return s.str();
 }
-//string ServicioFechas::calculoEdad(Fecha* fecha1,Fecha* fecha2){
-//	
-//} 
+string ServicioFechas::calculoEdad(Fecha* fecha1,Fecha* fecha2){
+	
+} 
