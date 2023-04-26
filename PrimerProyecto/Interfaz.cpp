@@ -133,6 +133,12 @@ void Interfaz::ingresarCurso(Gym* gym) {
 	gym->getCOC()->ingresar(curso);
 
 }
+void Interfaz::reporteDeCurso(Gym* gym) {
+
+	
+
+
+}
 void Interfaz::controlDeGrupos() {
 	system("color E5");
 	cout << "\t\t CONTROL DE GRUPOS" << endl
