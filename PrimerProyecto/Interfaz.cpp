@@ -15,6 +15,8 @@ void Interfaz::menu() {
 	cout << endl << "Digite una opcion del menu: ";
 }
 
+
+//Administracion
 void Interfaz::administracionGeneral() {
 	cout << "\t\t ADMINISTRACION GENERAL" << endl
 		<< "1. Nombre del Gimnasio" << endl
@@ -23,6 +25,24 @@ void Interfaz::administracionGeneral() {
 		<< endl << "Digite una opcion del menu: ";
 }
 
+void Interfaz::nombreGym(Gym* gym){
+	string nombre;
+	cout << "Administracion General >> Nombre del Gimnasio" << endl << endl;
+	cout << "Ingrese el nombre del gimnasio: ";
+	cin >> nombre;
+	gym->setNombre(nombre);
+}
+
+void Interfaz::mensualidad(Gym* gym){
+	double men;
+	cout << "Administracion General >> Nombre del Gimnasio" << endl << endl;
+	cout << "Ingrese la mensualidad: ";
+	cin >> men;
+	gym->setMensualidad(men);
+}
+
+
+// Control de deportistas
 void Interfaz::controlDeDeportistas() {
 	system("color 8B");
 	cout << "\t\t CONTROL DE DEPORTISTAS" << endl
@@ -35,8 +55,58 @@ void Interfaz::controlDeDeportistas() {
 
 }
 
+void Interfaz::ingresaDeportista(Gym* gym){
+	string id, tel, nom;
+	int dia, mes, anio, horas, iron, ganados;
+	char sex;
+
+	cout << "Control de Deportista >> Ingresar Nuevo Deportista" << endl << endl;
+	cout << "Datos Generales:" << endl;
+	cout << "\t ID: " << endl;
+	cin >> id;
+	cout << "\t Telefono: "  << endl;
+	cin >> tel;
+	cout << "\t Nombre Completo: " << endl;
+	cin >> nom;
+	cout << "\t Fecha de nacimiento(dd mm anio): " << endl;
+	cin >> dia >> mes >> anio;
+	cout << "\t Sexo(f/m): " << endl;
+	cin >> sex;
+	cout << "\t Horas Entrenamiento: " << endl;
+	cin >> horas;
+	cout << "\t Cantidad de partidos IronMan: " << endl;
+	cin >> iron;
+	cout << "\t Cantidad de triatlones ganados: " << endl;
+	cin >> ganados;
+	cout << "Datos Biometrico basico" << endl;
+	cout << "\t Estatura: " << endl;
+
+	cout << "\t : " << endl;
+
+	cout << "\t : " << endl;
+
+	cout << "\t : " << endl;
 
 
+
+	Fecha* x = new Fecha(dia, mes, anio);
+	Deportista* d = new Triatlonista(ced, nom, tel, x, sex, );
+	gym->getCOD()->ingresar(d);
+
+
+	
+}
+string ced, string nom, string tel, Fecha* fec, char sex, double est, int cantP, int cantT, int horasEntrenas, double temPro, double masa, double peso, double porcG
+void Interfaz::modificaDeportista(Gym*){
+	
+}
+
+void Interfaz::listaDeporsita(Gym*)
+{
+}
+
+
+// Control de Cursos
 void Interfaz::controlDeCursos() {
 	system("color 60");
 	cout << "\t\t CONTROL DE CURSOS" << endl
