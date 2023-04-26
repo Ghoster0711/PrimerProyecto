@@ -34,4 +34,5 @@ bool Contenedor<T>::ingresar(T* dato) {
 
 template<class T>
 void Contenedor<T>::visualizar() {
+
 }
