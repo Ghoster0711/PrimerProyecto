@@ -12,7 +12,6 @@ public:
 	Nodo<T>* getPNodo();
 	T& operator  *();    //obtiene el elemento que ve y lo retorna 
 	void operator ++();  //se pasa de un elemento a otro
-	//void operator()();   
 };
 
 template<class T>

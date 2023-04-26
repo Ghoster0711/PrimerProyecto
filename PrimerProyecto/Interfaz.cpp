@@ -35,6 +35,8 @@ void Interfaz::controlDeDeportistas() {
 
 }
 
+
+
 void Interfaz::controlDeCursos() {
 	system("color 60");
 	cout << "\t\t CONTROL DE CURSOS" << endl
