@@ -14,3 +14,20 @@ public:
 	void ingresar(T*);
 };
 
+
+template<class T>
+Contenedor<T>::Contenedor() {
+	_primero = NULL;
+	_ultimo = NULL;
+	cantidad = 0;
+}
+
+template<class T>
+Contenedor<T>::~Contenedor() {
+
+}
+
+template<class T>
+void Contenedor<T>::ingresar(T*) {
+
+}

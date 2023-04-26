@@ -19,6 +19,7 @@ Grupo::Grupo(string id, string nom, int cM, int d, Fecha* fec, Horario* hor) {
 		vec[i] = NULL;
 	}
 }
+
 Grupo:: ~Grupo() {
 	if (fecha != NULL)
 		delete fecha;
@@ -28,6 +29,7 @@ Grupo:: ~Grupo() {
 		delete vec[i];
 	delete[] vec;
 }
+
 bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	if (cant < cupoMaximo) {
 		vec[cant++] = triatlonista;
@@ -36,6 +38,7 @@ bool Grupo::ingresarTritlonista(Triatlonista* triatlonista){
 	else
 		return false;
 }
+<<<<<<< HEAD
 bool Grupo::eliminarTritlonista(string ID){}
 int Grupo::getCant(){}
 string Grupo::getIDInstructor() { return IDInst; }
@@ -50,6 +53,79 @@ void Grupo::setCupoMaximo(int cM) { cupoMaximo = cM; }
 void Grupo::setDurarcion(int d) { duracion = d; }
 void Grupo::setFecha(Fecha* fec) { fecha = fec; }
 void Grupo::setHorario(Horario* hor) { horario = hor; }
+=======
+
+bool Grupo::eliminarTritlonista(string id){
+	if (cant != 0) {
+		for (int i = 0; i < cant; i++) {
+			if (vec[i]->getCedula() == id) {
+				delete vec[i];
+				vec[i] = NULL;
+				for (int j = i; j < cant; j++) {
+					vec[j] = vec[j + 1];
+				}
+				vec[cant] = NULL;
+				cant--;
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+int Grupo::getCant() {
+	return cant;
+}
+
+string Grupo::getIDInstructor() { 
+	return IDInst; 
+}
+
+string Grupo::getNombreInstructor() {
+	return nombreInst; 
+}
+
+int Grupo::getCupoMaximo() { 
+	return cupoMaximo; 
+}
+
+int Grupo::getDuracion() { 
+	return duracion; 
+}
+
+Fecha* Grupo::getFecha() { 
+	return fecha; 
+}
+
+Horario* Grupo::getHorario() {
+	return horario;
+}
+
+void Grupo::setID(string id) {
+	IDInst = id;
+}
+
+void Grupo::setNombre(string nom) {
+	nombreInst = nom;
+}
+
+void Grupo::setCupoMaximo(int cM) { 
+	cupoMaximo = cM; 
+}
+
+void Grupo::setDurarcion(int d) { 
+	duracion = d; 
+}
+
+void Grupo::setFecha(Fecha* fec) {
+	fecha = fec;
+}
+
+void Grupo::setHorario(Horario* hor) {
+	horario = hor; 
+}
+
+>>>>>>> 376e0bf3185368ce02a11d599e391367e07d8fe3
 string Grupo::toString() {
 	stringstream s;
 	s<<"ID del Instructor: "<<IDInst<<endl
