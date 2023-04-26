@@ -128,6 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ciclista.cpp" />
+    <ClCompile Include="ExcepcionCodigo.cpp" />
+    <ClCompile Include="Excepciones.cpp" />
+    <ClCompile Include="ExcepcionGrupoRango.cpp" />
+    <ClCompile Include="ExcepcionID.cpp" />
+    <ClCompile Include="ExcepcionRango.cpp" />
     <ClCompile Include="Grupo.cpp" />
     <ClCompile Include="Grupo.h" />
     <ClCompile Include="Gym.cpp" />
@@ -152,6 +157,7 @@
     <ClInclude Include="Curso.h" />
     <ClInclude Include="ExcepcionCodigo.h" />
     <ClInclude Include="Excepciones.h" />
+    <ClInclude Include="ExcepcionGrupoLleno.h" />
     <ClInclude Include="ExcepcionID.h" />
     <ClInclude Include="ExcepcionRango.h" />
     <ClInclude Include="Fecha.h" />

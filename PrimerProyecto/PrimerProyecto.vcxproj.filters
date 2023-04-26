@@ -16,6 +16,9 @@
     <Filter Include="Header Files\ExcepcionesUsuario">
       <UniqueIdentifier>{0b73cddb-7b65-4adc-9483-b7c893659b64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ExcepcionesUsuario">
+      <UniqueIdentifier>{79e274e7-5d4a-4bea-804a-1a64abddb321}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Deportista.h">
@@ -69,6 +72,21 @@
     <ClCompile Include="Grupo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Excepciones.cpp">
+      <Filter>Source Files\ExcepcionesUsuario</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcepcionRango.cpp">
+      <Filter>Source Files\ExcepcionesUsuario</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcepcionID.cpp">
+      <Filter>Source Files\ExcepcionesUsuario</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcepcionGrupoRango.cpp">
+      <Filter>Source Files\ExcepcionesUsuario</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcepcionCodigo.cpp">
+      <Filter>Source Files\ExcepcionesUsuario</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fecha.h">
@@ -117,6 +135,9 @@
       <Filter>Header Files\ExcepcionesUsuario</Filter>
     </ClInclude>
     <ClInclude Include="ExcepcionCodigo.h">
+      <Filter>Header Files\ExcepcionesUsuario</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcepcionGrupoLleno.h">
       <Filter>Header Files\ExcepcionesUsuario</Filter>
     </ClInclude>
   </ItemGroup>
