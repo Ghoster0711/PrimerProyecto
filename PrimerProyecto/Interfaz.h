@@ -24,15 +24,11 @@ public:
 	static void ingresarCurso(Gym*);
 	static void reporteDeCurso(Gym*);
 
-	//Control de Cursos 
-	static void controlDeCursos();
-	static void ingresarCurso(Gym*);
-
-
-
 	//Control de Grupos 
 	static void controlDeGrupos();
-	
+	static void ingresarGrupo();
+	static void modificarGrupo();
+
 
 	//Control de Pagos 
 	static void controlPagos();
