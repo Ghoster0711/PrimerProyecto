@@ -150,6 +150,10 @@
     <ClInclude Include="Contenedor.h" />
     <ClInclude Include="Corredor.h" />
     <ClInclude Include="Curso.h" />
+    <ClInclude Include="ExcepcionCodigo.h" />
+    <ClInclude Include="Excepciones.h" />
+    <ClInclude Include="ExcepcionID.h" />
+    <ClInclude Include="ExcepcionRango.h" />
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="Gym.h" />
     <ClInclude Include="HistorialDePago.h" />

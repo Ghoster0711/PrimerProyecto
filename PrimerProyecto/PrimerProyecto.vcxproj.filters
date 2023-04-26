@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\ExcepcionesUsuario">
+      <UniqueIdentifier>{0b73cddb-7b65-4adc-9483-b7c893659b64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Deportista.h">
@@ -45,9 +48,6 @@
     <ClCompile Include="Curso.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Nodo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Principal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -55,9 +55,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HistorialDePago.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Contenedor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Gym.cpp">
@@ -109,6 +106,18 @@
     </ClInclude>
     <ClInclude Include="Interfaz.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Excepciones.h">
+      <Filter>Header Files\ExcepcionesUsuario</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcepcionRango.h">
+      <Filter>Header Files\ExcepcionesUsuario</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcepcionID.h">
+      <Filter>Header Files\ExcepcionesUsuario</Filter>
+    </ClInclude>
+    <ClInclude Include="ExcepcionCodigo.h">
+      <Filter>Header Files\ExcepcionesUsuario</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
