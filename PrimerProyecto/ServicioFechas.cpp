@@ -23,9 +23,9 @@ string ServicioFechas::diferenciaFechas(Fecha* fecha1, Fecha* fecha2) {
 		respFech = diaFecha2 - diaFecha1;
 	}
 	else {
-		respFech = fecha2->getDia() - fecha2->getDia();
+		respFech = diaFecha2 - diaFecha1;
 	}
-	if (fecha2->getMes() < fecha2->getMes()) {
+	if (mesFecha2 < mesFecha1) {
 		mesFecha2 = mesFecha2 + 12; 
 		anioFecha2 = anioFecha2 - 1;
 		respMes = mesFecha2 - mesFecha1;
