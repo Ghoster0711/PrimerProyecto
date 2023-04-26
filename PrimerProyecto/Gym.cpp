@@ -21,7 +21,7 @@ string Gym::getNombre() { return nombre; }
 double Gym::getMensualidad() { return mensualidad; }
 
 
-void Gym::getMensualidad(double men) { mensualidad = men; }
+void Gym::setMensualidad(double men) { mensualidad = men; }
 
 void Gym::setNombre(string nom) { nombre = nom; }
 

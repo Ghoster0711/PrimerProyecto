@@ -7,6 +7,7 @@ int main() {
 	bool salir = true;
 	int opcion = 0;
 	int op = 0;
+	Gym* gym = new Gym();
 	while (salir) {
 		Interfaz::menu();
 		cin >> opcion;
@@ -16,8 +17,10 @@ int main() {
 				cin >> op;
 				switch (op) {
 				case 1:
+					Interfaz::nombreGym(gym);
 					break;
 				case 2:
+					Interfaz::mensualidad(gym);
 					break;
 				case 3:
 					break;

@@ -18,7 +18,7 @@ public:
 	double getMensualidad();
 
 
-	void getMensualidad(double);
+	void setMensualidad(double);
 	void setNombre(string);
 
 };
