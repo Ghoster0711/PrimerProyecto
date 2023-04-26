@@ -57,6 +57,7 @@ void Interfaz::controlDeDeportistas() {
 
 void Interfaz::ingresaDeportista(Gym* gym){
 	string id, tel, nom;
+	double est, masa, peso, grasa;
 	int dia, mes, anio, horas, iron, ganados;
 	char sex;
 
@@ -80,13 +81,19 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	cin >> ganados;
 	cout << "Datos Biometrico basico" << endl;
 	cout << "\t Estatura: " << endl;
+	cin >> est;
+	cout << "\t Peso: " << endl;
+	cin >> peso;
+	cout << "\t Grasa Corporal: " << endl;
+	cin >> grasa;
+	cout << "\t Masa Muscular: " << endl;
+	cin >> masa;
 
-	cout << "\t : " << endl;
 
-	cout << "\t : " << endl;
-
-	cout << "\t : " << endl;
-
+	Fecha* x = new Fecha(dia, mes, anio);
+	Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
+	gym->getCOD()->ingresar(d);
+	delete d;
 
 
 	
