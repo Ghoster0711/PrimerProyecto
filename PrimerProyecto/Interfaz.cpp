@@ -16,7 +16,7 @@ void Interfaz::menu() {
 }
 
 
-//Administracion
+//--------------------------------Administracion------------------------------------------
 void Interfaz::administracionGeneral() {
 	cout << "\t\t ADMINISTRACION GENERAL" << endl
 		<< "1. Nombre del Gimnasio" << endl
@@ -42,7 +42,7 @@ void Interfaz::mensualidad(Gym* gym){
 }
 
 
-// Control de deportistas
+//-------------------------------Control de Deportistas---------------------------------------
 void Interfaz::controlDeDeportistas() {
 	system("color 8B");
 	cout << "\t\t CONTROL DE DEPORTISTAS" << endl
@@ -108,7 +108,7 @@ void Interfaz::listaDeporsita(Gym*)
 }
 
 
-// Control de Cursos
+//--------------------------------Control de Cursos------------------------------------------
 void Interfaz::controlDeCursos() {
 	system("color 60");
 	cout << "\t\t CONTROL DE CURSOS" << endl
@@ -137,12 +137,30 @@ void Interfaz::ingresarCurso(Gym* gym) {
 
 }
 void Interfaz::reporteDeCurso(Gym* gym) {
-
+	cout << "Control de Cursos >> Reporte de curso especifico" << endl;
 	cout << "Listado de cursos: " << endl;
-	cout<<"\t "<<g
-
 
 }
+void Interfaz::modificarCurso(Gym* gym) {
+	string cod;
+	int op;
+	cout << "Control de Cursos >> Modificacion de Curso Especifico" << endl;
+	cout << "Digite el codigo del curso especifico :" << endl;
+	cin >> cod;
+	//Buscar el curso
+
+	cout << "Cual dato desea modificar: " << endl;
+	cout << "\n 1. Codigo de curso" << endl;
+	cout << "\n 2. Nombre del curso" << endl;
+	cout << "\n 3. Nivel" << endl;
+	cout << "\n 4. Descripcion" << endl;
+	cout << "\n 5. Cantidad de grupos" << endl;
+	cout << "Digite una opcion del menu: " << endl;
+	cin >> op;
+}
+
+
+//--------------------------------Control de Grupos------------------------------------------
 void Interfaz::controlDeGrupos() {
 	system("color E5");
 	cout << "\t\t CONTROL DE GRUPOS" << endl
