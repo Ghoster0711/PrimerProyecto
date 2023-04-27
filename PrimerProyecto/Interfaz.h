@@ -28,7 +28,7 @@ public:
 	static void controlDeGrupos();
 	static void ingresarGrupo();
 	static void modificarGrupo();
-
+	static void matricularEnGrupo(); 
 
 	//Control de Pagos 
 	static void controlPagos();

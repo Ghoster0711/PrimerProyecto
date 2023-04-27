@@ -135,14 +135,14 @@ void Interfaz::ingresarCurso(Gym* gym) {
 	Curso* curso = new Curso(cod, nom, niv, descrip);
 	gym->getCOC()->ingresar(curso);
 
-}
-void Interfaz::reporteDeCurso(Gym* gym) {
-
-	cout << "Listado de cursos: " << endl;
-	cout<<"\t "<<g
-
 
 }
+
+
+
+
+
+//Control de grupos
 void Interfaz::controlDeGrupos() {
 	system("color E5");
 	cout << "\t\t CONTROL DE GRUPOS" << endl
@@ -150,6 +150,82 @@ void Interfaz::controlDeGrupos() {
 		<< "2. Monto de Mensualidad" << endl
 		<< "3. Volver" << endl
 		<< endl << "Digite una opcion del menu: ";
+}
+void Interfaz::ingresarGrupo() {
+	string cod, ID, nom;
+	int c, dia, mes, anio, s, h1, m1, h2, m2;
+	char d;
+	cout << "Control de Grupos >> Ingreso de grupo" << endl;
+	cout << "Listado de cursos: " << endl;
+	//Listado de cursos
+
+	cout << "Digite el codigo del curso: " << endl;
+	cin >> cod;
+	//Buscar el curso
+
+	cout << "Digite el ID del Instructor: " << endl;
+	cin >> ID;
+	cout << "Digite el nombre del Instructor: " << endl;
+	cin >> nom;
+	cout << "Digite el cupo maximo: " << endl;
+	cin >> c;
+	cout << "Fecha de inicio(dd/mm/aaaa): " << endl;
+	cin >> dia; cout << "/"; cin >> mes; cout << "/"; cin >> anio;
+	cout << "Semanas de duracion: " << endl;
+	cin >> s;
+
+	cout << "Horario: " << endl;
+	cout << "Digite el dia de la semana (l,k,m,j,v,s,d): " << endl;
+	cin >> d;
+	cout << "Digite la ;hora de inicio (en hora militar): " << endl;
+	cin >> h1; cout << ":"; cin >> m1;
+	cout << "Digite la hora de finalizacion (en hora militar): " << endl;
+	cin >> h2; cout << ":"; cin >> m2;
+
+	Fecha* fechaInicio = new Fecha(dia, mes, anio);
+	Hora* horaInicio = new Hora(h1, m1);
+	Hora* horaFinal = new Hora(h2, m2);
+	Horario* horario = new Horario(d, horaInicio, horaFinal);
+
+	Grupo* curso = new Grupo(ID, nom, c, s ,fechaInicio, horario);
+}
+void Interfaz::modificarGrupo() {
+	int op;
+	cout << "Control de Grupo >> Modificacion de grupo especifico" << endl;
+	//Listado de cursos
+
+	cout << "Digite el codigo del curso: " << endl;
+	
+	cout << "Que desea modificar: " << endl;
+	cout << "1. ID del Instructor: " << endl;
+	cout << "2. Nombre del Instructor: " << endl;
+	cout << "3. Cupo maximo: " << endl;
+	cout << "4. Fecha de inicio: " << endl;
+	cout << "5. Semanas de duracion: " << endl;
+	cin >> op;
+
+
+}
+void Interfaz::matricularEnGrupo() {
+	string ID, cod, op, dia, mes, anio;
+	cout << "Control de grupo >> Matricula en grupo especifico" << endl;
+	cout << "Digite el ID del deportista: " << endl;
+	cin >> ID;
+	//Buscar deportista 
+	cout << "Digite el codigo del curso: " << endl;
+	cin >> cod;
+	//Buscar curso
+	
+	cout << "Para el curso deseado existen los siguientes grupos disponibles: " << endl;
+	//Lista de grupos 
+	cout << "Digite el numero de grupo deseado: " << endl;
+	cin >> op;
+	cout << "Digite la fecha de matricula(dd/mm/aaaa): " << endl;
+	cin >> dia; cout << "/"; cin >> mes; cout << "/"; cin >> anio;
+
+	//Buscar si hay cupo en el grupo 
+
+
 }
 
 void Interfaz::controlPagos() {

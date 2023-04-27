@@ -1,19 +1,17 @@
 #include "Horario.h"
 
-Horario::Horario()
-	:dia(""), horaI(0), horaF(0) {}
-Horario::Horario(string dia, int horaI, int horaF)
-	:dia(dia), horaI(horaI), horaF(horaF) {}
+Horario::Horario() : dia(''), horaI(NULL), horaF(NULL) {}
+Horario::Horario(char dia, Hora* horaI, Hora* horaF) :dia(dia), horaI(horaI), horaF(horaF) {}
 Horario::~Horario() {}
-string Horario::getDia() { return dia; }
-int Horario::getHoraI() { return horaI; }
-int Horario::getHoraF() { return horaF; }
-void Horario::setDia(string d) { dia = d; }
-void Horario::setHoraI(int h) { horaI = h; }
-void Horario::setHoraF(int m) { horaF = m; }
+char Horario::getDia() { return dia; }
+Hora* Horario::getHoraI() { return horaI; }
+Hora* Horario::getHoraF() { return horaF; }
+void Horario::setDia(char d) { dia = d; }
+void Horario::setHoraI(Hora* h) { horaI = h; }
+void Horario::setHoraF(Hora* m) { horaF = m; }
 string Horario::toString(){
 	stringstream show;
-	show << "Dia: " << dia << "\t Hora del curso: " << horaI << " - " << horaF << endl
+	show << "Dia: " << dia << "\t Hora del curso: " << horaI->toString() << " - " << horaF->toString() << endl
 		<< endl;
 
 	return show.str();
