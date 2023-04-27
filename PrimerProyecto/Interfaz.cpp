@@ -207,8 +207,9 @@ void Interfaz::modificarGrupo() {
 
 }
 void Interfaz::matricularEnGrupo() {
-	string ID, cod, op, dia, mes, anio;
-	cout << "Control de grupo >> Matricula en grupo especifico" << endl;
+	string ID, cod, dia, mes, anio;
+	int op;
+	cout << "Control de Grupo >> Matricula en grupo especifico" << endl;
 	cout << "Digite el ID del deportista: " << endl;
 	cin >> ID;
 	//Buscar deportista 
@@ -227,6 +228,70 @@ void Interfaz::matricularEnGrupo() {
 
 
 }
+void Interfaz::reporteDeGrupo() {
+	string cod;
+	int op;
+	cout << "Control de Grupo >> Reporte de grupo especifico" << endl;
+	//Listado de cursos
+
+	cout << "Digite el codigo del curso" << endl;
+	cin >> cod;
+	//Buscar curso 
+	
+	//Listado de grupos para el curso seleccionado: 
+	cout << "Digite el numero de grupo: " << endl;
+	cin >> op;
+	//Buscar grupo
+
+	cout << "A continuacion se muestra la infomacion del grupo #" << op << " del curso " << cod <<":"<< endl;
+	//Informacion del grupo 
+
+}
+void Interfaz::reporteDeportistasEnGrupos(){
+	string cod;
+	int op;
+	cout << "Control de Grupo >> Reporte deportistas matriculados por grupo" << endl;
+
+
+	//Listado de cursos
+
+	cout << "Digite el codigo del curso: " << endl;
+	cin >> cod;
+	//Buscar curso 
+
+	//Listado de grupos para el curso seleccinado
+
+	cout << "Digite el numero de grupo: " << endl;
+	cin >> op;
+	//Buscar grupo 
+
+	//Listado de matriculados en el grupo.....etc 
+}
+void Interfaz::cancelacionDeMatriculaEnGrupo(){
+	string ID,cod;
+	int op;
+	cout << "Control de Grupos >> Cancelacion de matricula en grupo" << endl;
+
+	cout << "Digite el ID del deportistas: " << endl;
+	cin >> ID;
+	//Buscar deportista
+
+	//Listado de cursos
+
+
+	cout << "Digite el codigo de curso: " << endl;
+	cin >> cod;
+	//Buscar curso
+
+	//Listado de grupos para el curso selccionado
+
+	cout << "Digite el numero de grupo: " << endl;
+	cin >> op;
+	//Buscar grupo
+
+
+
+}
 
 void Interfaz::controlPagos() {
 	system("color 71");
@@ -235,6 +300,30 @@ void Interfaz::controlPagos() {
 		<< "2. Reporte de pagos por deportista" << endl
 		<< "3. Volver" << endl
 		<< endl << "Digite una opcion del menu: ";
+}
+
+void Interfaz::registroNuevoPago() {
+	string ID;
+	cout << "Control de Pagos >> Registro de nuevo pago" << endl;
+
+	//Fecha actual 
+	cout << "Digite el ID del deportista: " << endl;
+	cin >> ID;
+	//Buscar deportista
+	//ETC
+
+
+}
+void Interfaz::reporteDePagosDeportista() {
+	string ID;
+	cout << "Control de Pagos >> Reporte de pagos por deportista" << endl;
+	//Fecha actual 
+
+	cout << "Digte el ID del deportista: " << endl;
+	cin >> ID;
+	//Desplegar historial del pagos 
+
+
 }
 
 
