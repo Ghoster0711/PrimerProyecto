@@ -139,12 +139,7 @@ void Interfaz::ingresarCurso(Gym* gym) {
 }
 
 
-
-
-
-
 //Control de grupos
-=======
 void Interfaz::reporteDeCurso(Gym* gym) {
 	cout << "Control de Cursos >> Reporte de curso especifico" << endl;
 	cout << "Listado de cursos: " << endl;
