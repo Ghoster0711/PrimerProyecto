@@ -25,6 +25,8 @@ public:
 	static void reporteDeCurso(Gym*);
 
 
+
+
 	//Control de Grupos 
 	static void controlDeGrupos();
 	static void ingresarGrupo();
