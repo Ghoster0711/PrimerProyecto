@@ -33,9 +33,7 @@ Contenedor<T>::Contenedor() {
 }
 
 template<class T>
-Contenedor<T>::~Contenedor() {
-
-}
+Contenedor<T>::~Contenedor() {}
 
 template<class T>
 bool Contenedor<T>::ingresar(T* dato) {
