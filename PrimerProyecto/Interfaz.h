@@ -23,12 +23,27 @@ public:
 	static void controlDeCursos();
 	static void ingresarCurso(Gym*);
 	static void reporteDeCurso(Gym*);
+
+
+	//Control de Grupos 
+	static void controlDeGrupos();
+	static void ingresarGrupo();
+	static void modificarGrupo();
+	static void matricularEnGrupo(); 
+	static void reporteDeGrupo();
+	static void reporteDeportistasEnGrupos();
+	static void cancelacionDeMatriculaEnGrupo();
+
+
 	static void modificarCurso(Gym*);
 
 	//Control de Grupos 
 	static void controlDeGrupos();
 
+
 	//Control de Pagos 
 	static void controlPagos();
+	static void nuevoPago();
+	static void reporteDePagosDeportista();
 };
 
