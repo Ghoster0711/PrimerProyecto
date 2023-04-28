@@ -6,15 +6,19 @@ template<class T>
 class Contenedor{
 private:
 	Nodo<T>* _primero;
+	Nodo<T>* _actual;
 	int cantidad;
-	Iterador<T>* ite;
 public:
 	Contenedor();
 	virtual ~Contenedor();
 
-	bool ingresar(T*);
-	friend ostream& operator<<(ostream& out, const Contenedor<T>& l) {
-		Nodo<T>* actual = l._primero;
+	Nodo<T>* getNodo();
+	bool ingresar(const T&);
+	
+	bool encontrarDeportista(Contenedor<Deportista>*, string);
+
+	friend ostream& operator<<(ostream& out, const Contenedor<T>*l) {
+		Nodo<T>* actual = l->_primero;
 		while (actual != NULL) {
 			out << *actual->getDato() << endl
 				<< "#####################################" << endl;
@@ -28,8 +32,8 @@ public:
 template<class T>
 Contenedor<T>::Contenedor() {
 	_primero = NULL;
+	_actual = NULL;
 	cantidad = 0;
-	ite = NULL;
 }
 
 template<class T>
@@ -38,9 +42,29 @@ Contenedor<T>::~Contenedor() {
 }
 
 template<class T>
-bool Contenedor<T>::ingresar(T* dato) {
-	_primero = new Nodo<T>(dato, _primero);
+Nodo<T>* Contenedor<T>::getNodo() {
+	return _primero;
+}
+
+template<class T>
+bool Contenedor<T>::ingresar(const T& dato) {
+	_primero = new Nodo<T>((T*)&dato, _primero);
 	cantidad++;
 	return true;
 }
 
+template<class T>
+bool Contenedor<T>::encontrarDeportista(Contenedor<Deportista>* con, string ced) {
+	con->_actual = con->_primero;
+	Deportista* d;
+	while (con->_actual != NULL) {
+		if (con->_actual->getDato() != NULL) {
+			d = con->_actual->getDato();
+			if (d->getCedula() == ced) {
+				return true;
+			}
+		}
+		con->_actual = con->_actual->getSiguiente();
+	}
+	return false;
+}

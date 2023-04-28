@@ -21,4 +21,5 @@ public:
 	void setMensualidad(double);
 	void setNombre(string);
 
+
 };
