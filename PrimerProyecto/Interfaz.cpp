@@ -336,7 +336,7 @@ void Interfaz::controlPagos() {
 		<< endl << "Digite una opcion del menu: ";
 }
 
-void Interfaz::registroNuevoPago() {
+void Interfaz::nuevoPago() {
 	string ID;
 	cout << "Control de Pagos >> Registro de nuevo pago" << endl;
 
