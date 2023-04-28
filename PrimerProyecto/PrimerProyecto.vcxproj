@@ -136,6 +136,7 @@
     <ClCompile Include="Grupo.cpp" />
     <ClCompile Include="Grupo.h" />
     <ClCompile Include="Gym.cpp" />
+    <ClCompile Include="Hora.cpp" />
     <ClCompile Include="Interfaz.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="ServicioFechas.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="Gym.h" />
     <ClInclude Include="HistorialDePago.h" />
+    <ClInclude Include="Hora.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="Interfaz.h" />
     <ClInclude Include="Iterador.h" />

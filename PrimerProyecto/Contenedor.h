@@ -37,9 +37,7 @@ Contenedor<T>::Contenedor() {
 }
 
 template<class T>
-Contenedor<T>::~Contenedor() {
-
-}
+Contenedor<T>::~Contenedor() {}
 
 template<class T>
 Nodo<T>* Contenedor<T>::getNodo() {

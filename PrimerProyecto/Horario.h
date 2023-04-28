@@ -1,25 +1,26 @@
 #pragma once
 #include <iostream>
 #include <sstream>
+#include"Hora.h"
 
 using namespace std;
 
 
 class Horario {
 private:
-    string dia;
-    int horaI;
-    int horaF;
+    char dia;
+    Hora* horaI;
+    Hora* horaF;
 public:
     Horario();
-    Horario(string, int, int);
+    Horario(char, Hora*, Hora*);
     virtual ~Horario();
-    string getDia();
-    int getHoraI();
-    int getHoraF();
-    void setDia(string);
-    void setHoraI(int);
-    void setHoraF(int);
+    char getDia();
+    Hora* getHoraI();
+    Hora* getHoraF();
+    void setDia(char);
+    void setHoraI(Hora*);
+    void setHoraF(Hora*);
     string toString();
 
 };
