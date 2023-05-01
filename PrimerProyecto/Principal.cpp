@@ -31,8 +31,10 @@ int main() {
 				cin >> op;
 				switch (op) {
 				case 1:
+					Interfaz::ingresaDeportista(gym);
 					break;
 				case 2:
+					Interfaz::modificaDeportista(gym);
 					break;
 				case 3:
 					break;

@@ -92,19 +92,27 @@ void Interfaz::ingresaDeportista(Gym* gym){
 
 	Fecha* x = new Fecha(dia, mes, anio);
 	Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
-	gym->getCOD()->ingresar(d);
+	gym->getCOD()->ingresar(*d);
 	delete d;
 
 
 	
 }
 
-void Interfaz::modificaDeportista(Gym*){
-	
+void Interfaz::modificaDeportista(Gym* gym){
+	string id;
+	cout << "Control de Deportista >> Modificar Deportista" << endl << endl;
+	cout << "Ingrese el ID del jugador: ";
+	cin >> id;
+	if (gym->getCOD()->encontrarDeportista(gym->getCOD(), id) == true) {
+		cout << "Se encontro deportista!!" << endl;
+	}
+
 }
 
-void Interfaz::listaDeporsita(Gym*)
+void Interfaz::listaDeporsita(Gym* gym)
 {
+	//cout << *gym->getCOD() << endl;
 }
 
 
@@ -120,7 +128,7 @@ void Interfaz::controlDeCursos() {
 }
 void Interfaz::ingresarCurso(Gym* gym) {
 	string cod, nom, niv, descrip;
-	int cant;
+	//int cant;
 
 	cout << "Control de Cursos >> Ingreso nuevo curso" << endl;
 	cout << "Digite el codigo del curso: " << endl;
@@ -133,7 +141,7 @@ void Interfaz::ingresarCurso(Gym* gym) {
 	cout << "Descripcion: " << descrip;
 
 	Curso* curso = new Curso(cod, nom, niv, descrip);
-	gym->getCOC()->ingresar(curso);
+	gym->getCOC()->ingresar(*curso);
 
 
 }
@@ -143,6 +151,9 @@ void Interfaz::ingresarCurso(Gym* gym) {
 void Interfaz::reporteDeCurso(Gym* gym) {
 	cout << "Control de Cursos >> Reporte de curso especifico" << endl;
 	cout << "Listado de cursos: " << endl;
+
+
+
 
 }
 void Interfaz::modificarCurso(Gym* gym) {
@@ -325,7 +336,7 @@ void Interfaz::controlPagos() {
 		<< endl << "Digite una opcion del menu: ";
 }
 
-void Interfaz::registroNuevoPago() {
+void Interfaz::nuevoPago() {
 	string ID;
 	cout << "Control de Pagos >> Registro de nuevo pago" << endl;
 

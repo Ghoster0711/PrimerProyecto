@@ -1,6 +1,6 @@
 #include "Horario.h"
 
-Horario::Horario() : dia(''), horaI(NULL), horaF(NULL) {}
+Horario::Horario() : dia(' '), horaI(NULL), horaF(NULL) {}
 Horario::Horario(char dia, Hora* horaI, Hora* horaF) :dia(dia), horaI(horaI), horaF(horaF) {}
 Horario::~Horario() {}
 char Horario::getDia() { return dia; }

@@ -25,6 +25,8 @@ public:
 	static void reporteDeCurso(Gym*);
 
 
+
+
 	//Control de Grupos 
 	static void controlDeGrupos();
 	static void ingresarGrupo();
@@ -37,8 +39,7 @@ public:
 
 	static void modificarCurso(Gym*);
 
-	//Control de Grupos 
-	static void controlDeGrupos();
+	
 
 
 	//Control de Pagos 
