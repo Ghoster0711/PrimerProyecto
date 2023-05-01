@@ -335,7 +335,6 @@ void Interfaz::registroNuevoPago() {
 	//Buscar deportista
 	//ETC
 
-
 }
 void Interfaz::reporteDePagosDeportista() {
 	string ID;
