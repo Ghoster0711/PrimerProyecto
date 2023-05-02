@@ -63,58 +63,169 @@ void Interfaz::ingresaDeportista(Gym* gym){
 
 	cout << "Control de Deportista >> Ingreso Nuevo Deportista" << endl << endl;
 	cout << "Datos Generales:" << endl;
-	cout << "\t ID: " << endl;
+	cout << "ID: ";
 	cin >> id;
-	cout << "\t Telefono: "  << endl;
+	cout << "Telefono: ";
 	cin >> tel;
-	cout << "\t Nombre Completo: " << endl;
+	cout << "Nombre Completo: ";
 	cin >> nom;
-	cout << "\t Fecha de nacimiento(dd mm anio): " << endl;
-	cin >> dia >> mes >> anio;
-	cout << "\t Sexo(f/m): " << endl;
+	cout << "Fecha de nacimiento(dd/mm/aaaa): ";
+	cin >> dia; cout << "/"; cin >> mes; cout << "/"; cin >> anio;
+	cout << "Sexo(f/m): ";
 	cin >> sex;
-	cout << "\t Horas Entrenamiento: " << endl;
+	cout << "Horas Entrenamiento: ";
 	cin >> horas;
-	cout << "\t Cantidad de partidos IronMan: " << endl;
+	cout << "Cantidad de partidos IronMan: ";
 	cin >> iron;
-	cout << "\t Cantidad de triatlones ganados: " << endl;
+	cout << "Cantidad de triatlones ganados: ";
 	cin >> ganados;
-	cout << "Datos Biometrico basico" << endl;
-	cout << "\t Estatura: " << endl;
+	cout << "Datos Biometrico basico:" << endl;
+	cout << "Estatura: ";
 	cin >> est;
-	cout << "\t Peso: " << endl;
+	cout << "Peso: ";
 	cin >> peso;
-	cout << "\t Grasa Corporal: " << endl;
+	cout << "Grasa Corporal: ";
 	cin >> grasa;
-	cout << "\t Masa Muscular: " << endl;
+	cout << "Masa Muscular: ";
 	cin >> masa;
-
-
 	Fecha* x = new Fecha(dia, mes, anio);
 	Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
 	gym->getCOD()->ingresar(*d);
 	delete d;
-
-
-	
+	cout << "Deportista ingresado!!" << endl;
+	system("pause");
 }
 
-void Interfaz::modificaDeportista(Gym* gym){
+void Interfaz::modificaDeportista(Gym* gym) {
 	string id;
+	int op;
 	cout << "Control de Deportista >> Modificar Deportista" << endl << endl;
 	cout << "Ingrese el ID del jugador: ";
 	cin >> id;
 	if (gym->getCOD()->encontrarDeportista(gym->getCOD(), id) == true) {
 		cout << "Se encontro deportista!!" << endl;
+		cout << "Que dato desea modificar: " << endl;
+		cout << "1. Nombre" << endl;
+		cout << "2. Telefono" << endl;
+		cout << "3. Fecha de nacimiento" << endl;
+		cout << "4. Sexo" << endl;
+		cout << "5. Estatura" << endl;
+		cout << "6. Peso" << endl;
+		cout << "7. Porcentaje de grasa corporal" << endl;
+		cout << "8. Porcentaje de grasa muscular" << endl;
+		cout << "9. Estado" << endl;
+		cout << "10. Horas de entrenamiento" << endl;
+		cout << "10. Cantidad de partidos Iron Man" << endl;
+		cout << "12. Cantidad de triatlones ganados" << endl;
+		cout << "Digite una opcion: " << endl;
+		cin >> op;
+		modificacionesDeportista(gym, op);
 	}
 
 }
 
-void Interfaz::listaDeporsita(Gym* gym)
-{
-	//cout << *gym->getCOD() << endl;
+void Interfaz::modificacionesDeportista(Gym* gym, int op) {
+	string auxs;
+	int d, m, a, h;
+	double auxd;
+	char s;
+	switch (op) {
+	case 1: {
+		cout << "Digite el nuevo nombre: ";
+		cin >> auxs;
+		//Cambiar 
+	}break;
+	case 2: {
+		cout << "Digite el nuevo numero de telefono: ";
+		cin >> auxs;
+		//Cambiar
+	}break;
+	case 3: {
+		cout << "Digite la nueva fecha de nacimiento(dd/mm/aaaa): ";
+		cin >> d; cout << "/"; cin >> m; cout << "/"; cin >> a;
+		Fecha* fecha = new Fecha(d, m, a);
+		//Cambiar 
+	}break;
+	case 4: {
+		cout << "Digite el nuevo sexo('f''m'): ";
+		cin >> s;
+		//Cambiar 
+	}break;
+	case 5: {
+		cout << "Digite la nueva estatura: ";
+		cin >> auxd;
+		//Cambiar 
+	}break;
+	case 6: {
+		cout << "Digite el nuevo peso: ";
+		cin >> auxd;
+		//Cambiar 
+	}break;
+	case 7: {
+		cout << "Digite el nuevo porcentaje de grasa corporal: ";
+		cin >> auxd;
+		//Cambiar
+	}break;
+	case 8: {
+		cout << "Digite el nuevo porcentaje de grasa muscular: ";
+		cin >> auxd;
+		//Cambiar
+	}break;
+	case 9: {
+		//si el estado esta activo se puede desactivar
+
+	}break;
+	case 10: {
+		cout << "Digite las nuevas horas de entrenamiento: ";
+		cin >> h;
+		//Cambiar
+	}break;
+	case 11: {
+		cout << "Digite la nueva cantidad de partidos Iron Main: ";
+		cin >> h;
+		//Cambiar
+	}break;
+	case 12: {
+		cout << "Digite la nueva cantidad de triatlones ganados: ";
+		cin >> h;
+		//Cambiar
+	}break;
+	}
 }
 
+void Interfaz::listaDeporsitas(Gym* gym){
+	int op;
+	cout << "1. Listado general:" << endl;
+	cout << "2. Listado de deportistas activos:" << endl;
+	cout << "3. Listado de deportistas inactivos:" << endl;
+	cout << "4. Listado de deportistas en morosidad:" << endl;
+	cout << "Digite uana opcion:" << endl;
+	cin >> op;
+	switch (op) {
+	case 1: {
+		//Listado general
+	}break;
+	case 2: {
+		//Listado de activios
+	}break;
+	case 3: {
+		//Listado de inactivos
+	}break;
+	case 4: {
+		//Listado de morosidad
+	}break;
+	}
+}
+
+void Interfaz::detalleDeportistaEspecifico(Gym* gym) {
+	string id;
+	cout << "Digite el ID del deportista: " << endl;
+	cin >> id;
+	if (gym->getCOD()->encontrarDeportista(gym->getCOD(), id) == true) {
+		cout << "Se encontro deportista!!" << endl;
+		//Se despliega datos del deportista
+	}
+}
 
 //--------------------------------Control de Cursos------------------------------------------
 void Interfaz::controlDeCursos() {
@@ -124,38 +235,44 @@ void Interfaz::controlDeCursos() {
 		<< "2. Reporte de curso especifico" << endl
 		<< "3. Modificacion de curso especifico" << endl
 		<< "4. Volver" << endl
-		<< endl << "Digite una opcion del menu: ";
+		<< "Digite una opcion del menu: " << endl;
 }
+
 void Interfaz::ingresarCurso(Gym* gym) {
 	string cod, nom, niv, descrip;
-	//int cant;
+	int cant;
 
 	cout << "Control de Cursos >> Ingreso nuevo curso" << endl;
-	cout << "Digite el codigo del curso: " << endl;
+	cout << "Digite el codigo del curso: ";
 	cin >> cod;
-	cout << "Digite el nombre del curso: " << endl;
+	cout << "Digite el nombre del curso: ";
 	cin >> nom;
-	cout << "Digite el nivel: " << niv;
-	/*cout << "Cantidad de grupos: " << endl;
-	cin >> cant;*/
-	cout << "Descripcion: " << descrip;
+	cout << "Digite el nivel: ";
+	cin >> niv;
+	cout << "Cantidad de grupos: ";
+	cin >> cant;
+	cout << "Descripcion: ";
+	cin >> descrip;
 
 	Curso* curso = new Curso(cod, nom, niv, descrip);
 	gym->getCOC()->ingresar(*curso);
-
+	delete curso;
+	cout << "Curso ingresado!!" << endl;
+	system("pause");
 
 }
 
-
-//Control de grupos
 void Interfaz::reporteDeCurso(Gym* gym) {
+	string cod;
 	cout << "Control de Cursos >> Reporte de curso especifico" << endl;
 	cout << "Listado de cursos: " << endl;
+	//Listado de cursos
 
-
-
-
+	cout << "Digte el codigo del curso:" << endl;
+	cin >> cod;
+	//terminar 
 }
+
 void Interfaz::modificarCurso(Gym* gym) {
 	string cod;
 	int op;
@@ -172,6 +289,39 @@ void Interfaz::modificarCurso(Gym* gym) {
 	cout << "\n 5. Cantidad de grupos" << endl;
 	cout << "Digite una opcion del menu: " << endl;
 	cin >> op;
+	modificacionesCurso(gym, op);
+}
+void Interfaz::modificacionesCurso(Gym* gym, int op) {
+	string auxs;
+	int cant;
+	switch (op) {
+	case 1: {
+		cout << "Digite el nuevo codigo:" << endl;
+		cin >> auxs;
+		//Cambiar
+	}break;
+	case 2: {
+		cout << "Digite el nuevo nombre:" << endl;
+		cin >> auxs;
+		//Cambiar
+	}break;
+	case 3: {
+		cout << "Digite el nuevo nivel:" << endl;
+		cin >> auxs;
+		//Cambiar
+	}break;
+	case 4: {
+		cout << "Digite la nueva descripcion:" << endl;
+		cin >> auxs;
+		//Cambiar
+	}break;
+	case 5: {
+		cout << "Digite la nueva cantidad de grupos:" << endl;
+		cin >> cant;
+		//if(cant > cantGruporDelCurso)
+		//Cambiar 
+	}break;
+	}
 }
 
 
@@ -179,13 +329,18 @@ void Interfaz::modificarCurso(Gym* gym) {
 
 void Interfaz::controlDeGrupos() {
 	system("color E5");
+	int op;
 	cout << "\t\t CONTROL DE GRUPOS" << endl
-		<< "1. Nombre del Gimnasio" << endl
-		<< "2. Monto de Mensualidad" << endl
-		<< "3. Volver" << endl
-		<< endl << "Digite una opcion del menu: ";
+		<< "1. Ingreso de nuevo grupo" << endl
+		<< "2. Modificacion de grupo especifico" << endl
+		<< "3. Matricula en grupo especifico" << endl
+		<< "4. Reporte de grupo especifico" << endl
+		<< "5. Reporte deportistas matriculados en grupo" << endl
+		<< "6. Cancelacion de matricula en grupo" << endl
+		<< "Digite una opcion del menu:" << endl;
+	cin >> op;
 }
-void Interfaz::ingresarGrupo() {
+void Interfaz::ingresarGrupo(Gym* gym) {
 	string cod, ID, nom;
 	int c, dia, mes, anio, s, h1, m1, h2, m2;
 	char d;
@@ -223,24 +378,70 @@ void Interfaz::ingresarGrupo() {
 
 	Grupo* curso = new Grupo(ID, nom, c, s ,fechaInicio, horario);
 }
-void Interfaz::modificarGrupo() {
+void Interfaz::modificarGrupo(Gym* gym) {
 	int op;
+	string cod;
 	cout << "Control de Grupo >> Modificacion de grupo especifico" << endl;
 	//Listado de cursos
 
 	cout << "Digite el codigo del curso: " << endl;
-	
-	cout << "Que desea modificar: " << endl;
-	cout << "1. ID del Instructor: " << endl;
-	cout << "2. Nombre del Instructor: " << endl;
-	cout << "3. Cupo maximo: " << endl;
-	cout << "4. Fecha de inicio: " << endl;
-	cout << "5. Semanas de duracion: " << endl;
+	cin >> cod;
+	//Buscar curso
+	cout << "Digite el numero de grupo:" << endl;
 	cin >> op;
-
-
+	//Buscar grupo en el curso 
+	cout << "Que desea modificar " << endl
+		<< "1. ID del Instructor " << endl
+		<< "2. Nombre del Instructor " << endl
+		<< "3. Cupo maximo " << endl
+		<< "4. Fecha de inicio " << endl
+		<< "5. Semanas de duracion " << endl
+		<< "6. Dia de la semana" << endl
+		<< "7. Hora de incio" << endl
+		<< "8. Hora de finalizacion" << endl;
+	cin >> op;
+	modificacionesGrupo(gym, op);
 }
-void Interfaz::matricularEnGrupo() {
+
+void Interfaz::modificacionesGrupo(Gym* gym, int op) {
+	string auxs;
+	int auxi,d,m,a;
+	char auxc;
+	switch (op) {
+	case 1:
+		cout << "Digite el nuevo ID del instructor:" << endl;
+		cin >> auxs;
+		break;
+	case 2:
+		cout << "Digite el nuevo nombre del instructor:" << endl;
+		cin >> auxs;
+		break;
+	case 3:
+		cout << "Digite el nuevo cupo maximo:" << endl;
+		cin >> auxi;
+		break;
+	case 4:
+		cout << "Digite la nueva fecha de inicio(dd/mm/aaaa):" << endl;
+		cin >> d; cout << "/"; cin >> m; cout << "/"; cin >> a;
+		break;
+	case 5:
+		cout << "Digite la nueva cantidad de semanas de duracion:" << endl;
+		cin >> auxi;
+		break;
+	case 6:
+		cout << "Digite el nuevo dia de la semana:" << endl;
+		cin >> auxc;
+		break;
+	case 7:
+		cout << "Digite la nueva hora de incio:" << endl;
+		cin >> auxi;
+		break;
+	case 8:
+		cout << "Digite la nueva hora de finalizacion:" << endl;
+		cin >> auxi;
+	}
+}
+void Interfaz::matricularEnGrupo(Gym* gym) {
 	string ID, cod, dia, mes, anio;
 	int op;
 	cout << "Control de Grupo >> Matricula en grupo especifico" << endl;
@@ -262,7 +463,7 @@ void Interfaz::matricularEnGrupo() {
 
 
 }
-void Interfaz::reporteDeGrupo() {
+void Interfaz::reporteDeGrupo(Gym* gym) {
 	string cod;
 	int op;
 	cout << "Control de Grupo >> Reporte de grupo especifico" << endl;
@@ -281,7 +482,7 @@ void Interfaz::reporteDeGrupo() {
 	//Informacion del grupo 
 
 }
-void Interfaz::reporteDeportistasEnGrupos(){
+void Interfaz::reporteDeportistasEnGrupo(Gym* gym){
 	string cod;
 	int op;
 	cout << "Control de Grupo >> Reporte deportistas matriculados por grupo" << endl;
@@ -301,7 +502,7 @@ void Interfaz::reporteDeportistasEnGrupos(){
 
 	//Listado de matriculados en el grupo.....etc 
 }
-void Interfaz::cancelacionDeMatriculaEnGrupo(){
+void Interfaz::cancelacionDeMatriculaEnGrupo(Gym* gym){
 	string ID,cod;
 	int op;
 	cout << "Control de Grupos >> Cancelacion de matricula en grupo" << endl;
@@ -326,7 +527,7 @@ void Interfaz::cancelacionDeMatriculaEnGrupo(){
 
 
 }
-
+//--------------------------------Control de Pagos------------------------------------------
 void Interfaz::controlPagos() {
 	system("color 71");
 	cout << "\t\t CONTROL PAGOS" << endl
@@ -336,18 +537,19 @@ void Interfaz::controlPagos() {
 		<< endl << "Digite una opcion del menu: ";
 }
 
-void Interfaz::nuevoPago() {
+void Interfaz::registroNuevoPago(Gym*) {
 	string ID;
 	cout << "Control de Pagos >> Registro de nuevo pago" << endl;
 
 	//Fecha actual 
+
 	cout << "Digite el ID del deportista: " << endl;
 	cin >> ID;
 	//Buscar deportista
-	//ETC
+	//ETC...
 
 }
-void Interfaz::reporteDePagosDeportista() {
+void Interfaz::reporteDePagosDeportista(Gym*) {
 	string ID;
 	cout << "Control de Pagos >> Reporte de pagos por deportista" << endl;
 	//Fecha actual 
@@ -355,8 +557,6 @@ void Interfaz::reporteDePagosDeportista() {
 	cout << "Digte el ID del deportista: " << endl;
 	cin >> ID;
 	//Desplegar historial del pagos 
-
-
 }
 
 
