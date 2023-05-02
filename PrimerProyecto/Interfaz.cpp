@@ -91,7 +91,6 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	Fecha* x = new Fecha(dia, mes, anio);
 	Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
 	gym->getCOD()->ingresar(*d);
-	delete d;
 	cout << "Deportista ingresado!!" << endl;
 	system("pause");
 }
@@ -102,7 +101,7 @@ void Interfaz::modificaDeportista(Gym* gym) {
 	cout << "Control de Deportista >> Modificar Deportista" << endl << endl;
 	cout << "Ingrese el ID del jugador: ";
 	cin >> id;
-	if (gym->getCOD()->encontrarDeportista(gym->getCOD(), id) == true) {
+	if (gym->getCOD()->encontrarDeportista(id) == true) {
 		cout << "Se encontro deportista!!" << endl;
 		cout << "Que dato desea modificar: " << endl;
 		cout << "1. Nombre" << endl;
@@ -221,7 +220,7 @@ void Interfaz::detalleDeportistaEspecifico(Gym* gym) {
 	string id;
 	cout << "Digite el ID del deportista: " << endl;
 	cin >> id;
-	if (gym->getCOD()->encontrarDeportista(gym->getCOD(), id) == true) {
+	if (gym->getCOD()->encontrarDeportista(id) == true) {
 		cout << "Se encontro deportista!!" << endl;
 		//Se despliega datos del deportista
 	}

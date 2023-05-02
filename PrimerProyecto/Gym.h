@@ -21,5 +21,5 @@ public:
 	void setMensualidad(double);
 	void setNombre(string);
 
-
+	string listadoDeportistas();
 };

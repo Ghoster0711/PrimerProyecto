@@ -25,5 +25,11 @@ void Gym::setMensualidad(double men) { mensualidad = men; }
 
 void Gym::setNombre(string nom) { nombre = nom; }
 
+string Gym::listadoDeportistas() {
+	stringstream show;
+	Iterador<Deportista>* ite = new Iterador<Deportista>(COD->getPrimero());
+	
 
+	return show.str();
+}
  
