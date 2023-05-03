@@ -17,6 +17,8 @@ public:
 	bool ingresar(T&);
 	
 	bool encontrarDeportista(string);
+	Deportista* retonarDeportista(string);
+	void listarDeportistas();
 
 	
 
@@ -71,4 +73,31 @@ bool Contenedor<T>::encontrarDeportista(string ced) {
 		this->_actual = this->_actual->getSiguiente();
 	}
 	return false;
+}
+
+template<class T>
+Deportista* Contenedor<T>::retonarDeportista(string ced){
+	_actual = _primero;
+	while (this->_actual != NULL) {
+		if (this->_actual->getDato() != NULL) {
+			if (this->_actual->getDato()->getCedula() == ced) {
+				return this->_actual->getDato();
+			}
+		}
+		this->_actual = this->_actual->getSiguiente();
+	}
+	return NULL;
+}
+
+template<class T>
+void Contenedor<T>::listarDeportistas(){
+	_actual = _primero;
+	cout << "-----------------------------------------------------------------" << endl;
+	while (this->_actual != NULL) {
+		if (this->_actual->getDato() != NULL) {
+			cout << this->_actual->getDato()->toString()
+				<< "-----------------------------------------------------------------" << endl;
+		}
+		this->_actual = this->_actual->getSiguiente();
+	}
 }

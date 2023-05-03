@@ -29,6 +29,15 @@ double Triatlonista::getProcGrasaCorporal() { return nadador->getProcGrasaCorpor
 int Triatlonista::getHorasEntrenadas() { return ciclista->getHorasEntrenadas(); }
 double Triatlonista::getTemPromedio() { return ciclista->getTemPromedio(); }
 
+Contenedor<HistorialDePago>* Triatlonista::getHistoriaPago()
+{
+	return COH;
+}
+
+void Triatlonista::setHistoriaPago(Contenedor<HistorialDePago>* c){
+	COH = c;
+}
+
 void Triatlonista::setHorasEntrenadas(int horas) { ciclista->setHorasEntrenadas(horas); }
 void Triatlonista::setTemPromedio(double tem) { ciclista->setTemPromedio(tem); }
 void Triatlonista::setMasaMuscular(double mas) { nadador->setMasaMuscular(mas); }
