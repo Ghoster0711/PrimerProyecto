@@ -2,6 +2,7 @@
 #include "Fecha.h"
 #include "Ciclista.h"
 #include "Nadador.h"
+#include "Contenedor.h"
 
 
 class Deportista {
@@ -10,7 +11,7 @@ protected:
 	string nombre;
 	string telefono;
 	Fecha* fecha;
-
+	Contenedor<HistorialDePago>* COH;
 public:
 	Deportista(string, string, string, Fecha*);
 	virtual ~Deportista();
@@ -29,7 +30,9 @@ public:
 	virtual double getProcGrasaCorporal() = 0;
 	virtual int getHorasEntrenadas() = 0;
 	virtual double getTemPromedio() = 0;
-	
+	virtual Contenedor<HistorialDePago>* getHistoriaPago() = 0;
+
+	virtual void setHistoriaPago(Contenedor<HistorialDePago>*) = 0;
 	virtual void setHorasEntrenadas(int) = 0;
 	virtual void setTemPromedio(double) = 0;
 	virtual void setMasaMuscular(double) = 0;

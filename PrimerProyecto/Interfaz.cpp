@@ -60,7 +60,6 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	double est, masa, peso, grasa;
 	int dia, mes, anio, horas, iron, ganados;
 	char sex;
-
 	cout << "Control de Deportista >> Ingreso Nuevo Deportista" << endl << endl;
 	cout << "Datos Generales:" << endl;
 	cout << "ID: ";
@@ -88,10 +87,14 @@ void Interfaz::ingresaDeportista(Gym* gym){
 	cin >> grasa;
 	cout << "Masa Muscular: ";
 	cin >> masa;
-	Fecha* x = new Fecha(dia, mes, anio);
-	Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
-	gym->getCOD()->ingresar(*d);
-	cout << "Deportista ingresado!!" << endl;
+	if (gym->getCOD()->encontrarDeportista(id) != true) {
+		Fecha* x = new Fecha(dia, mes, anio);
+		Deportista* d = new Triatlonista(id, nom, tel, x, sex, est, iron, ganados, horas, 0.0, masa, peso, grasa);
+		gym->getCOD()->ingresar(*d);
+		cout << "Deportista ingresado!!" << endl;
+	}
+	else
+		cout << "El deportista no se puede ingresar porque ya existe" << endl;
 	system("pause");
 }
 
@@ -102,7 +105,7 @@ void Interfaz::modificaDeportista(Gym* gym) {
 	cout << "Ingrese el ID del jugador: ";
 	cin >> id;
 	if (gym->getCOD()->encontrarDeportista(id) == true) {
-		cout << "Se encontro deportista!!" << endl;
+		cout << "Se encontro deportista!!" << endl << endl;
 		cout << "Que dato desea modificar: " << endl;
 		cout << "1. Nombre" << endl;
 		cout << "2. Telefono" << endl;
@@ -116,79 +119,86 @@ void Interfaz::modificaDeportista(Gym* gym) {
 		cout << "10. Horas de entrenamiento" << endl;
 		cout << "10. Cantidad de partidos Iron Man" << endl;
 		cout << "12. Cantidad de triatlones ganados" << endl;
+		cout << "13. Volver" << endl;
 		cout << "Digite una opcion: " << endl;
 		cin >> op;
-		modificacionesDeportista(gym, op);
+		modificacionesDeportista(gym->getCOD()->retonarDeportista(id), op);
 	}
+	else
+		cout << "No se encontro el deportista" << endl;
 
 }
 
-void Interfaz::modificacionesDeportista(Gym* gym, int op) {
-	string auxs;
-	int d, m, a, h;
-	double auxd;
-	char s;
+void Interfaz::modificacionesDeportista(Deportista* depo, int op) {
+	char s = ' ';
+	string text = "";
+	double num1 = 0;
+	int num2 = 0, d, m ,a;
 	switch (op) {
-	case 1: {
-		cout << "Digite el nuevo nombre: ";
-		cin >> auxs;
-		//Cambiar 
-	}break;
-	case 2: {
-		cout << "Digite el nuevo numero de telefono: ";
-		cin >> auxs;
-		//Cambiar
-	}break;
-	case 3: {
-		cout << "Digite la nueva fecha de nacimiento(dd/mm/aaaa): ";
-		cin >> d; cout << "/"; cin >> m; cout << "/"; cin >> a;
-		Fecha* fecha = new Fecha(d, m, a);
-		//Cambiar 
-	}break;
-	case 4: {
-		cout << "Digite el nuevo sexo('f''m'): ";
-		cin >> s;
-		//Cambiar 
-	}break;
-	case 5: {
-		cout << "Digite la nueva estatura: ";
-		cin >> auxd;
-		//Cambiar 
-	}break;
-	case 6: {
-		cout << "Digite el nuevo peso: ";
-		cin >> auxd;
-		//Cambiar 
-	}break;
-	case 7: {
-		cout << "Digite el nuevo porcentaje de grasa corporal: ";
-		cin >> auxd;
-		//Cambiar
-	}break;
-	case 8: {
-		cout << "Digite el nuevo porcentaje de grasa muscular: ";
-		cin >> auxd;
-		//Cambiar
-	}break;
-	case 9: {
-		//si el estado esta activo se puede desactivar
+		case 1: {
+			cout << "Digite el nuevo nombre: ";
+			cin >> text;
+			depo->setNombre(text);		
+		}break;
+		case 2: {
+			cout << "Digite el nuevo numero de telefono: ";
+			cin >> text;
+			depo->setTelefono(text);
+		}break;
+		case 3: {
+			cout << "Digite la nueva fecha de nacimiento(dd/mm/aaaa): ";
+			cin >> d; cout << "/"; cin >> m; cout << "/"; cin >> a;
+			Fecha* fecha = new Fecha(d, m, a);
+			depo->setFecha(fecha);
+			//Cambiar 
+		}break;
+		case 4: {
+			cout << "Digite el nuevo sexo('f''m'): ";
+			cin >> s;
+			depo->setSexo(s);
+		}break;
+		case 5: {
+			cout << "Digite la nueva estatura: ";
+			cin >> num1;
+			depo->setEstatura(num1);
+		}break;
+		case 6: {
+			cout << "Digite el nuevo peso: ";
+			cin >> num1;
+			depo->setPeso(num1);
+		}break;
+		case 7: {
+			cout << "Digite el nuevo porcentaje de grasa corporal: ";
+			cin >> num1;
+			depo->setProcGrasaCorporal(num1);
+		}break;
+		case 8: {
+			cout << "Digite el nuevo porcentaje de masa muscular: ";
+			cin >> num1;
+			depo->setMasaMuscular(num1);
+		}break;
+		case 9: {
+			//si el estado esta activo se puede desactivar
 
-	}break;
-	case 10: {
-		cout << "Digite las nuevas horas de entrenamiento: ";
-		cin >> h;
-		//Cambiar
-	}break;
-	case 11: {
-		cout << "Digite la nueva cantidad de partidos Iron Main: ";
-		cin >> h;
-		//Cambiar
-	}break;
-	case 12: {
-		cout << "Digite la nueva cantidad de triatlones ganados: ";
-		cin >> h;
-		//Cambiar
-	}break;
+		}break;
+		case 10: {
+			cout << "Digite las nuevas horas de entrenamiento: ";
+			cin >> num2;
+			depo->setHorasEntrenadas(num2);
+		}break;
+		case 11: {
+			cout << "Digite la nueva cantidad de partidos Iron Main: ";
+			cin >> num2;
+			depo->setCantParticEnIronMan(num2);
+		}break;
+		case 12: {
+			cout << "Digite la nueva cantidad de triatlones ganados: ";
+			cin >> num2;
+			depo->setCantTriatGanados(num2);
+		}break;
+		case 13: {
+			// Volver
+		}break;
 	}
 }
 
@@ -202,9 +212,11 @@ void Interfaz::listaDeporsitas(Gym* gym){
 	cin >> op;
 	switch (op) {
 	case 1: {
-		//Listado general
+		gym->getCOD()->listarDeportistas();
+		system("pause");
 	}break;
 	case 2: {
+		//Falta modificar deportista 
 		//Listado de activios
 	}break;
 	case 3: {

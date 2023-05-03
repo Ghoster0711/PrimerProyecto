@@ -19,7 +19,7 @@ public:
 	static void controlDeDeportistas();
 	static void ingresaDeportista(Gym*);
 	static void modificaDeportista(Gym*);
-	static void modificacionesDeportista(Gym*, int);
+	static void modificacionesDeportista(Deportista*, int);
 	static void listaDeporsitas(Gym*);
 	static void detalleDeportistaEspecifico(Gym*);
 

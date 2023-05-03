@@ -28,7 +28,9 @@ public:
 	double getProcGrasaCorporal();
 	int getHorasEntrenadas();
 	double getTemPromedio();
-	
+	Contenedor<HistorialDePago>* getHistoriaPago();
+
+	void setHistoriaPago(Contenedor<HistorialDePago>*);
 	void setHorasEntrenadas(int);
 	void setTemPromedio(double);
 	void setMasaMuscular(double);
